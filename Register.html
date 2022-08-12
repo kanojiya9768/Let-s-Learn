@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <!-- //css link is here -->
+    <link rel="stylesheet"
+        href="css/register.css">
+
+    <!-- //cdn link is here of materialize  -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+
+    <!-- //favicon link is here  -->
+    <link rel="shortcut icon"
+        href="favicon/favicon.jpg"
+        type="image/x-icon">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+
+
+    <!-- //all firebase link  -->
+    <script
+        src="https://www.gstatic.com/firebasejs/9.9.1/firebase-app-compat.js"></script>
+    <script
+        src="https://www.gstatic.com/firebasejs/9.9.1/firebase-firestore-compat.js"></script>
+    <script
+        src="https://www.gstatic.com/firebasejs/9.9.1/firebase-auth-compat.js"></script>
+
+
+    <!-- //title of the site is here  -->
+    <title>Register : Let'sLearn</title>
+</head>
+
+<body>
+
+
+    <form id="Register_form" autocomplete="off">
+        <p class="Heading">Register</p>
+        <input id="email" type="email"
+            placeholder="Enter Email id" required>
+
+        <div class="password">
+            <input id="password" type="password"
+                placeholder="Enter password"
+                required>
+                
+                <i
+                class="fa-solid fa-eye"
+                id="show_pass" style="color:#fff; cursor: pointer;"
+                onclick="show();"></i> 
+                
+                <i
+                class="fa-solid fa-eye-low-vision"
+                id="hide_pass"
+                style="color:#fff; display: none; cursor: pointer;"
+                onclick="hide();"></i>
+        </div>
+
+
+        <div class="password">
+            <input id="c_password" type="password"
+            placeholder="Confirm password"
+            required>
+                
+                <i
+                class="fa-solid fa-eye"
+                id="show_c_pass" style="color:#fff; cursor: pointer;"
+                onclick="show_conferm();"></i> 
+                
+                <i
+                class="fa-solid fa-eye-low-vision"
+                id="hide_c_pass"
+                style="color:#fff; display: none; cursor: pointer;"
+                onclick="hide_conferm();"></i>
+        </div>
+
+
+        <button type="submit"
+            class="waves-effect waves-light btn">Register</button>
+
+        <p class="Already">Already have an account
+            : <a href="index.html">Login</a></p>
+    </form>
+
+
+
+
+
+    <!-- //alert box is here  -->
+    <div id="alertBox">
+        <p style="text-align:center;" id="alert_message">😀 Your Have Registered Yourself Successfully...?</p>
+        <div class="alert_btn">
+            <button id="btn1"><a href="index.html">Login Now</a></button>
+            <button><a onclick="window.location.reload();">Okay</a></button>
+        </div>
+    </div>
+
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="js/register.js"></script>
+
+
+
+
+    <!-- //script for show and hide password  -->
+    <script>
+        //for password
+        function show() {
+            let icon = document.getElementById('show_pass');
+
+            let password = document.getElementById('password');
+
+            if (password.type == "password") {
+                password.type = "text";
+            } else {
+                password.type = "password";
+            }
+
+                        
+            //hide this icon and show other icon
+            icon.style.display = 'none';
+            document.getElementById('hide_pass').style.display = 'inline-block'
+        }
+
+        function hide() {
+            let icon = document.getElementById('hide_pass');
+
+            let password = document.getElementById('password');
+
+            if (password.type == "password") {
+                password.type = "text";
+            } else {
+                password.type = "password";
+            }
+
+
+              //hide this icon and show other icon
+              icon.style.display = 'none';
+              document.getElementById('show_pass').style.display = 'inline-block'
+        }
+
+
+
+
+
+        //for conferm password
+        function show_conferm() {
+            let icon = document.getElementById('show_c_pass');
+
+            let cpassword = document.getElementById('c_password');
+
+            if (cpassword.type == "password") {
+                cpassword.type = "text";
+            } else {
+                cpassword.type = "password";
+            }
+
+                        
+            //hide this icon and show other icon
+            icon.style.display = 'none';
+            document.getElementById('hide_c_pass').style.display = 'inline-block'
+        }
+
+        function hide_conferm() {
+            let icon = document.getElementById('hide_c_pass');
+
+            let cpassword = document.getElementById('c_password');
+
+            if (cpassword.type == "password") {
+                cpassword.type = "text";
+            } else {
+                cpassword.type = "password";
+            }
+
+
+              //hide this icon and show other icon
+              icon.style.display = 'none';
+              document.getElementById('show_c_pass').style.display = 'inline-block'
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <!-- //css link is here -->
+    <link rel="stylesheet" href="css/reset.css">
+
+    <!-- //cdn link is here of materialize  -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+
+    <!-- //favicon link is here  -->
+    <link rel="shortcut icon"
+        href="favicon/favicon.jpg"
+        type="image/x-icon">
+
+
+    <!-- //all firebase link  -->
+    <script
+        src="https://www.gstatic.com/firebasejs/9.9.1/firebase-app-compat.js"></script>
+    <script
+        src="https://www.gstatic.com/firebasejs/9.9.1/firebase-firestore-compat.js"></script>
+    <script
+        src="https://www.gstatic.com/firebasejs/9.9.1/firebase-auth-compat.js"></script>
+
+    <!-- //title of the site is here  -->
+    <title>Reset Password : Let'sLearn</title>
+</head>
+
+<body>
+
+
+    <form id="Forgot" autocomplete="off">
+        <p class="Heading">Reset</p>
+        <input id="email" type="email"
+            placeholder="Enter Email id" required>
+
+        <button type="submit"
+            class="waves-effect waves-light btn">Reset</button>
+
+        <p class="Already">Go back to login : <a
+                href="index.html">Login</a></p>
+    </form>
+
+
+
+
+     <!-- //alert box is here  -->
+     <div id="alertBox">
+        <p id="alert_error_msg" style="text-align:center;">✔️ We Have Sent You The Link On Your Email To Reset Your Password Pls Check...!</p>
+        <div class="alert_btn">
+            <button id="Btn1"><a href="index.html">Login Now</a></button>
+            <button><a onclick="window.location.reload();" id="Btn2_link_value">Okay</a></button>
+        </div>
+    </div>
+
+
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="js/forgot.js"></script></body>
+
+</html>

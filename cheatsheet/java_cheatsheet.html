@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="css/java_cheat.css">
+    <link rel="icon" type="image/x-icon"
+        href="css/java.png">
+    <link rel="stylesheet" href="css/newprism.css">
+    <script src="js/newprism.js"></script>
+    <title>java CheatSheet</title>
+</head>
+
+<body>
+
+
+    <div class="nav-head" id="nav-head">
+
+        <nav class="navbar">
+            <img src="css/CheatSheet__logo.jpg"
+                class="img-fluid" id="image"
+                alt="cheatsheet">
+            <div>
+                <h1 class="heading"><a
+                        href="cheathtml.html">JAVA
+                        CHEATSHEET</a></h1>
+            </div>
+        </nav>
+    </div>
+
+    <div class="cheatbody" id="cheatbody">
+        <div class="btn">
+            <a href="/Home.html"><button
+                    type="button"
+                    value="Go To Home Page">HOME</button></a>
+        </div>
+
+        <ol id="cheat-content">
+            <li class="code">java BoilerPlate
+                :-<span>This is the basic template
+                    or barebone structure of
+                    java.</span>
+                <pre class="language-java"><code>
+class HelloWorld{ 
+    public static void main(String args[]){ 
+        System.out.println("Hello World"); 
+    }
+}                   
+                </code></pre>
+            </li>
+
+
+
+            <li class="code">for printing an Output.
+                <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">It will print something to the output console.</p>
+                <pre class="language-java"><code>System.out.println("Hello World");</code></pre>
+            </li>
+
+            <li class="code">Taking Input
+                <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">It will take string input from the user.</p>
+                <pre class="language-java"><code>
+import java.util.Scanner; //import scanner class
+
+// create an object of Scanner class
+Scanner input = new Scanner(System.in);
+
+// take input from the user
+String varName = input.nextLine();</code></pre>
+            </li>
+
+
+
+            <li class="code">Primitive Type Variables
+                <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">The eight primitives defined in Java are int, byte, short, long, float, double, boolean, and char those aren't considered objects and represent raw values.</p>
+            </li>
+
+            <li class="code">bytes
+                <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">byte is a primitive data type it only takes up 8 bits of memory.</p>
+                <pre class="language-java"><code>age = 18;</code></pre>
+            </li>
+            <li class="code">long
+                <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">long is another primitive data type related to integers. long takes up 64 bits of memory.</p>
+                <pre class="language-java"><code>long viewcounts = 3_123_456L</code></pre>
+            </li>
+            <li class="code">float
+                <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">We represent basic fractional numbers in Java using the float type. This is a single-precision decimal number. Which means if we get past six decimal points, this number becomes less precise and more of an estimate.</p>
+                <pre class="language-java"><code>float pi = 3.15f;</code></pre>
+            </li>
+            <li class="code">char
+                <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">Char is a 16-bit integer representing a Unicode-encoded character.</p>
+                <pre class="language-java"><code>char letter = 'A';</code></pre>
+            </li>
+            <li class="code">boolean
+                <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">The simplest primitive data type is boolean. It can contain only two values: true or false. It stores its value in a single bit.</p>
+                <pre class="language-java"><code>boolean isEligible = true;</code></pre>
+            </li>
+            <li class="code">int
+                <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">int holds a wide range of non-fractional number values.</p>
+                <pre class="language-java"><code>int var1 = 256;</code></pre>
+            </li>
+            <li class="code">short
+                <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">If we want to save memory and byte is too small, we can use short.</p>
+                <pre class="language-java"><code>short var2 = 786;</code></pre>
+            </li>
+            <li class="code">comments
+                <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">A comment is the code that is not executed by the compiler, and the programmer uses it to keep track of the code.</p>
+            </li>
+
+            <li class="code">Single line comment
+                <!-- <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">A comment is the code that is not executed by the compiler, and the programmer uses it to keep track of the code.</p> -->
+                <pre class="language-java"><code>// It's a single line comment</code></pre>
+            </li>
+
+            <li class="code">Multi-line comment
+                <!-- <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">A comment is the code that is not executed by the compiler, and the programmer uses it to keep track of the code.</p> -->
+                <pre class="language-java"><code>/* It's a Multi-line comment */</code></pre>
+            </li>
+
+
+
+
+            <li class="code"> Constants
+                <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">Constants are like a variable, except that their value never changes during program execution.</p>
+                <pre class="language-java"><code>final float INTEREST_RATE = 0.04;</code></pre>
+            </li>
+            <li class="code"> Arithmetic Expressions
+                <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">These are the collection of literals and arithmetic operators.</p>
+                <!-- <pre class="language-java"><code>final float INTEREST_RATE = 0.04;</code></pre> -->
+            </li>
+            <li class="code"> Addition
+                <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">It can be used to add two numbers.</p>
+                <pre class="language-java"><code>int x = 10 + 3;</code></pre>
+            </li>
+            <li class="code"> Subtraction
+                <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">It can be used to subtract two numbers.</p>
+                <pre class="language-java"><code>int x = 10 - 3;</code></pre>
+            </li>
+            <li class="code"> Multiplication
+                <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">It can be used to multiply two numbers.</p>
+                <pre class="language-java"><code>int x = 10 * 3;</code></pre>
+            </li>
+            <li class="code"> division
+                <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">It can be used to Division two numbers.</p>
+                <pre class="language-java"><code>
+int x = 10 / 3;
+float x = (float)10 / (float)3;</code></pre>
+            </li>
+            <li class="code"> Modulo Remainder
+                <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">It returns the remainder of the two numbers after division</p>
+                <pre class="language-java"><code>int x = 10 % 3;</code></pre>
+            </li>
+            <li class="code"> Augmented Operators
+                <!-- <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">It returns the remainder of the two numbers after division</p>
+                <pre class="language-java"><code>int x = 10 % 3;</code></pre> -->
+            </li>
+            <li class="code"> Addition assignment
+                <!-- <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">It returns the remainder of the two numbers after division</p> -->
+                <pre class="language-java"><code>var += 10 // var = var + 10</code></pre>
+            </li>
+            <li class="code"> Subtraction assignment
+                <!-- <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">It returns the remainder of the two numbers after division</p> -->
+                <pre class="language-java"><code>var -= 10 // var = var - 10</code></pre>
+            </li>
+            <li class="code"> Multiplication assignment
+                <!-- <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">It returns the remainder of the two numbers after division</p> -->
+                <pre class="language-java"><code>var *= 10 // var = var * 10</code></pre>
+            </li>
+            <li class="code"> Division assignment
+                <!-- <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">It returns the remainder of the two numbers after division</p> -->
+                <pre class="language-java"><code>var /= 10 // var = var / 10</code></pre>
+            </li>
+            <li class="code"> Modulus assignment
+                <!-- <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">It returns the remainder of the two numbers after division</p> -->
+                <pre class="language-java"><code>var %= 10 // var = var % 10</code></pre>
+            </li>
+            <li class="code">Escape Sequences
+                <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">It is a sequence of characters starting with a backslash, and it doesn't represent itself when used inside string literal.</p>
+                <!-- <pre class="language-java"><code>var %= 10 // var = var % 10</code></pre> -->
+            </li>
+
+            <li class="code">Tab
+                <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">It Gives a tab space</p>
+                <pre class="language-java"><code>\t</code></pre>
+            </li>
+
+            <li class="code">Backslash
+                <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">It adds a backslash</p>
+                <pre class="language-java"><code>\\</code></pre>
+            </li>
+
+            <li class="code">Single Quote
+                <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">It adds a single quotation mark</p>
+                <pre class="language-java"><code>\'</code></pre>
+            </li>
+
+            <li class="code">Double Quote
+                <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">It adds a double quotation mark</p>
+                <pre class="language-java"><code>\"</code></pre>
+            </li>
+
+            <li class="code">Question mark
+                <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">It adds a question mark</p>
+                <pre class="language-java"><code>\?</code></pre>
+            </li>
+
+            <li class="code">Carriage return
+                <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">Inserts a carriage return in the text at this point.</p>
+                <pre class="language-java"><code>\r</code></pre>
+            </li>
+
+            <li class="code">Type Casting
+                <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">Type Casting is a process of converting one data type into another.</p>
+                <!-- <pre class="language-java"><code>\r</code></pre> -->
+            </li>
+
+            <li class="code">Widening Type Casting
+                <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">It means converting a lower data type into a higher.</p>
+                <pre class="language-java"><code>// int x = 45;
+double var_name = x;
+</code></pre>
+            </li>
+            <li class="code">Narrowing Type Casting
+                <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">It means converting a higher data type into a lower.</p>
+                <pre class="language-java"><code>// int x = 165.48;
+int var_name = (int) x;</code></pre>
+            </li>
+            <li class="code">Decision Control Statements
+                <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">Conditional statements are used to perform operations based on some condition.</p>
+            </li>
+
+
+            <li class="code">if Statement
+                <!-- <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">It means converting a higher data type into a lower.</p> -->
+                <pre class="language-java"><code>if (condition) {
+// block of code to be executed if the condition is true
+}</code></pre>
+            </li>
+            <li class="code">if-else Statement
+                <!-- <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">It means converting a higher data type into a lower.</p> -->
+                <pre class="language-java"><code>if (condition) {
+// If condition is True then this block will get executed
+} else {
+// If condition is False then this block will get executed
+}</code></pre>
+            </li>
+
+            <li class="code">if else-if Statement
+                <!-- <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">It means converting a higher data type into a lower.</p> -->
+                <pre class="language-java"><code>if (condition1) {
+// Codes
+}
+else if(condition2) {
+// Codes
+}
+else if (condition3) {
+// Codes
+}
+else {
+// Codes
+}</code></pre>
+            </li>
+
+
+
+
+            <li class="code">Ternary Operator
+                <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">It is shorthand of an if-else statement. </p>
+                <pre class="language-java"><code>variable = (condition) ? expressionTrue : expressionFalse;</code></pre>
+            </li>
+
+            <li class="code">Switch Statements
+                <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">It allows a variable to be tested for equality against a list of values (cases).</p>
+                <pre class="language-java"><code>
+switch(expression) {
+case a:
+// code block
+break;
+case b:
+// code block
+break;
+default:
+// code block
+}</code>
+            </pre>
+
+            <li class="code">Iterative Statements
+                <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">Iterative statements facilitate programmers to execute any block of code lines repeatedly and can be controlled as per conditions added by the coder.</p>
+            </li>
+
+            <li class="code">While Loop
+                <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">It iterates the block of code as long as a specified condition is True.</p>
+                <pre class="language-java"><code>
+while (condition) {
+// code block
+}</code></pre>
+            </li>
+
+            <li class="code">for Loop
+                <!-- <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">It iterates the block of code as long as a specified condition is True.</p> -->
+                <pre class="language-java"><code>
+for (initialization; termination; increment) {
+statement(s)
+}</code></pre>
+            </li>
+
+            <li class="code">for-each Loop
+                <!-- <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">It iterates the block of code as long as a specified condition is True.</p> -->
+                <pre class="language-java"><code>
+for(dataType item : array) {
+...
+}</code></pre>
+            </li>
+
+            <li class="code">do-while Loop
+                <p style="color:rgb(197, 190, 190); font-weight: 100; margin-top: 5px;">It is an exit controlled loop. It is very similar to the while loop with one difference, i.e., the body of the do-while loop is executed at least once even if the condition is False</p>
+                <pre class="language-java"><code>
+do {
+// body of loop
+} while(textExpression)</code></pre>
+            </li>
+
+
+            
+
+        </ol>
+    </div>
+
+
+
+</body>
+
+</html>
