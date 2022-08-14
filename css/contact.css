@@ -178,6 +178,7 @@
     background-color: aqua;
     border-radius: 5px;
     font-size: 2.7vh;
+    border: none;
 }
 
 #alertBox > .alert_btn > :nth-child(1) > a{
@@ -192,6 +193,7 @@
     background-color: aqua;
     border-radius: 5px;
     font-size: 2.7vh;
+    border: none;
 }
 
 #alertBox > .alert_btn > :nth-child(1):hover{
