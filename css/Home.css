@@ -46,7 +46,7 @@ body {
 .fixed_icons_sidebar1{
   width: 40px;
   position: fixed;
-  top: 460px;
+  top: 525px;
   right: 10px;
   box-shadow: 0px 2px 10px 0px rgb(0, 0, 0);
   border-radius: 999px;
@@ -63,7 +63,7 @@ body {
 .fixed_icons_sidebar2{
   width: 40px;
   position: fixed;
-  top: 520px;
+  top: 580px;
   right: 10px;
   box-shadow: 0px 2px 10px 0px rgb(0, 0, 0);
   border-radius: 999px;
