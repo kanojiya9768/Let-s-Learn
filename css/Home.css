@@ -463,7 +463,7 @@ clip-path: polygon(0 0, 100% 0, 100% 81%, 0% 100%);
   border: 2px solid transparent;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  justify-content: center;
   align-items: center;
   text-align: center;
   background-color: orange;
@@ -490,7 +490,6 @@ clip-path: polygon(0 0, 100% 0, 100% 81%, 0% 100%);
 
 
 .detail_container > a > .detail_box > i {
-  margin-top: 30px;
   font-size: 7vh;
   color: aqua;
   margin-bottom: 20px;
