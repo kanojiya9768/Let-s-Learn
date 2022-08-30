@@ -21,7 +21,7 @@ form{
     width: 450px;
     height: 500px;
     background-color: rgba(0,0,0,.7);
-    border: 1px solid rgba(0,174,255);
+    border: 1px solid yellow;
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
@@ -47,7 +47,7 @@ form{
   }
 
 form > .Heading{
-    color: #fff;
+    color: #FCE601;
     font-size: 40px;
     font-weight: 600;
     text-transform: capitalize;
@@ -68,7 +68,7 @@ input{
     color: #fff;
     padding: 10px;
     margin-bottom: 50px;
-    border-bottom: 2px solid rgb(0, 174, 255);
+    border-bottom: 2px solid yellow;
     border-top: none; 
     border-left: none; 
     border-right:  none; 
@@ -94,11 +94,16 @@ button{
     border-radius: 5px;
     border: none;
     outline: none;
-    background-color: rgb(0, 174, 255);
+    background-color: orange;
     font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
     margin-bottom: 20px;
+    transition-duration: .8s;
+}
+
+button:hover{
+    background-color: yellow;
 }
 
 .Already{
@@ -108,7 +113,7 @@ button{
 
 .Already > a{
     text-decoration: none;
-    color: rgb(0,174,255);
+    color: #FCE601;
 }
 
 .captch{
@@ -257,3 +262,6 @@ button{
         font-size: 2vh;
     }
 }
+
+
+
