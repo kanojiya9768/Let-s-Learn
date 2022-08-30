@@ -13,7 +13,7 @@ a {
 
 body {
   width: 100%;
-  height: auto;
+  /* height: auto; */
   background: url(img/body_background.jpg);
   background-position: center;
   background-size: cover;
@@ -228,14 +228,15 @@ body {
   height: calc(86vh);
   /* background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url(img/bg.jpg); */
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to left bottom,
     #00f6ff,
     #00e4ff,
     #00d2ff,
     #00bdff,
     #00a8ff
-  );
+  ); */
+  background-color: rgb(255, 200, 0);
   -webkit-clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
   clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
   background-size: cover;
@@ -282,7 +283,7 @@ body {
   background-color: rgb(0, 0, 0);
   text-transform: uppercase;
   color: #fff;
-  box-shadow: 0px 5px 5px rgb(0, 179, 255);
+  box-shadow: 0px 5px 5px rgb(0, 0, 0);
 }
 
 .header > a > button:hover {
