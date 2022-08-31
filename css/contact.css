@@ -1,11 +1,13 @@
 .contact_heading{
-    font-size: 5vh;
-    color: #f9f9f9;
+    font-size: 35px;
+    color: #FCE601;
     text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .contact_caption{
-    color: rgb(179, 174, 174);
+    color: rgb(200, 176, 18);
     text-align: center;
     margin-top: 5px;
     margin-bottom: 40px;
@@ -18,7 +20,7 @@
     grid-template-columns: repeat(2,1fr);
     grid-gap: 20px;
     padding: 10px;
-    background-color: rgba(0,0,0,.7);
+    background-color: rgba(41, 40, 40, 0.7);
 }
 
 .contact_us > .map_left > iframe{
@@ -37,8 +39,8 @@
 }
 
 .contact_us > .contact_form > .contact_right_head{
-    font-size: 4vh;
-    color: #eee;
+    font-size: 35px;
+    color: #fff;
     text-align: center;
     margin-bottom: 10px;
 }
