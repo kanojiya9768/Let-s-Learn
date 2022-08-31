@@ -6,6 +6,11 @@
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
+::selection{
+  background-color: yellow;
+  color: #111;
+}
+
 a {
   text-decoration: none;
   color: #f9f9f9;
