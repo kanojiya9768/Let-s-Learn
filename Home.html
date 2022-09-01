@@ -42,9 +42,11 @@
     <title>Home : Let'sLearn</title>
 </head>
 
-<body oncontextmenu="return false">
+<body >
 
-    
+      <!-- //preloader html is here  -->
+      <!-- <div id="preloader"></div> -->
+
       <div class="container" id="preloader">
             <div class="ring ring1"><div></div></div>
             <p>Loading...</p>
@@ -52,15 +54,14 @@
 
 
 
-
     <!-- //navbar section is here  -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
 
         <input type="checkbox"
             name="navbar_responsive_checkbox"
             id="checkbox_for_nav">
         <label for="checkbox_for_nav"
-            id="icon_responsive"><i
+            id="icon_responsive" onclick="show_cross_on_click();" class="icon_responsive"><i
                 class="fa-solid fa-bars"></i></label>
 
         <label class="logo"><a
@@ -82,6 +83,13 @@
                     class="element" id="logout" href="#"><i class="fa-solid fa-circle-left"></i>Logout</a>
             </li>
         </ul>
+
+       
+        <!-- //side bar btn  -->
+            <a href="https://wa.me/918097859158" class="whatsapp_link icon_side_bar" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="tel:+91 8097859158" class="call_link icon_side_bar" target="_blank"><i class="fa-sharp fa-solid fa-phone"></i></a>
+
+
     </nav>
 
 
@@ -100,12 +108,6 @@
     </section>
 
 
-
-      <div class="fixed_icons_box">
-            <!-- //whatsapp and call logo  -->
-      <a href="https://wa.me/918097859158" class="whatsapp_link" target="_blank"><img src="css/img/whatsapp-logo.png" alt="" class="fixed_icons_sidebar1" title="Chat Now"></a>
-      <a href="tel:+91 8097859158" class="call_link" target="_blank"><img src="css/img/call_logo.png" alt="" class="fixed_icons_sidebar2" title="Call Now"></a>
-      </div>
 
 
 
@@ -613,14 +615,14 @@
             <div class="about_me_details">
                   <p id="head_about">About</p>
                   <p class="line"></p>
-                  <p class="intro"><span style="font-size:25px; font-weight: 600;">H</span>ello This Is Vishal Brijesh Kanojiya..I Am The Owner And The Founder Of This Site and I am From <span>`Mumbai Maharashtra India`</span> and I am also a Student Of Third Year Bsc Computer Science and Studying from South Indian Education society Which Is In Nerul Navi Mumbai India and This Is One The Top College In Navi Mumbai and I am Full Stack Web Developer..!</p> 
+                  <p class="intro"><span style="font-size:25px; font-weight: 600;">H</span>ello This Is Vishal Brijesh Kanojiya..I Am The Owner And The Founder Of This Site and I am From <span>`Mumbai Maharashtra India`</span> and I am also a Studend Of Third Year Bsc Computer Science and Studying from South Indian Education society Which Is In Nerul Navi Mumbai India and This Is One The Top College In Navi Mumbai and I am Full Stack Web Developer..!</p> 
                   <p style="font-family: Arial, Helvetica, sans-serif; font-weight: 600; margin: 10px 0px; color: #fff;">Thanks U For Visiting My Site.</p>
                   
                   <div class="hire_me">
                         <p>Hire Me</p>
-                        <div class="button">
-                          <a href="https://wa.me/918097859158" target="_blank" title="Whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
-                          <a href="tel:+91 8097859158" target="_blank" title="Calling"><i class="fa-solid fa-phone-volume"></i></a>
+                        <div class="button">    
+                             <a href="https://wa.me/918097859158" class="whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                              <a href="tel:+91 8097859158" class="calling" target="_blank"><i class="fa-sharp fa-solid fa-phone"></i></a>
                         </div>
                   </div>
 
@@ -688,11 +690,6 @@
 
 
 
-
-
-  
-
-
 <script
         src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
     <script src="js/contact.js"></script>
@@ -716,7 +713,10 @@
             easing: 'ease'
       }
   );
+
+
 </script>
+
 <script src="js/vanilla-tilt.min.js"></script>
 
 </body>
