@@ -254,12 +254,9 @@ body {
 }
 
 .logo > a {
-  color: #fff;
+  color: yellow;
   transition-duration: 0.6s;
-}
-
-.logo > a:hover {
-  color: #fec601;
+  -webkit-text-stroke: 1px yellow;
 }
 
 .nav_element {
