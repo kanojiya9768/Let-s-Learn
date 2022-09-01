@@ -6,9 +6,16 @@
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
+
+:root{
+  --Yellow : yellow;
+  --light-black : #111;
+  --green : green; 
+}
+
 ::selection{
-  background-color: yellow;
-  color: #111;
+  background-color: var(--Yellow);
+  color: var(--light-black);
 }
 
 a {
@@ -148,7 +155,7 @@ body {
 
 .ring {
   width: 200px;
-  background-color: #111;
+  background-color: var(--light-black);
   height: 200px;
   margin: auto;
   border-radius: 999px;
@@ -198,7 +205,7 @@ body {
 .icon_side_bar{
   width: 50px;
   height: 50px;
-  background-color:green;
+  background-color:var(--green);
   text-align: center;
   border-radius: 99px;
   display: flex;
@@ -309,7 +316,7 @@ body {
   position: absolute;
   left: 10px;
   top: 90px;
-  background-color:yellow;
+  background-color:var(--Yellow);
   padding: 8px;
   border-radius: 99px;
   z-index: -1;
@@ -336,9 +343,9 @@ body {
 }
 
 .logo > a {
-  color: yellow;
+  color: var(--Yellow);
   transition-duration: 0.6s;
-  -webkit-text-stroke: 1px yellow;
+  -webkit-text-stroke: 1px var(--Yellow);
 }
 
 .nav_element {
@@ -366,20 +373,20 @@ body {
 
 .nav_element > li > a:hover {
   background-color: rgb(255, 217, 0);
-  color: #111;
+  color: var(--light-black);
 }
 
 
 .nav_element > li > #logout {
   background-color: #fec601;
-  color: #111;
+  color: var(--light-black);
   border: none;
 }
 
 .nav_element > li > #logout:hover {
   border: none;
-  background-color: yellow;
-  color: #111;
+  background-color: var(--Yellow);
+  color: var(--light-black);
 }
 
 #checkbox_for_nav {
@@ -446,7 +453,7 @@ body {
   .nav_element > li > a:hover {
     border: none;
     font-size: 20px;
-    background-color: yellow;
+    background-color: var(--Yellow);
     color: #000;
   }
 }
@@ -557,7 +564,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: yellow;
+  background: var(--Yellow);
 }
 
 /* //detail boxes is here  */
@@ -682,7 +689,7 @@ body {
   margin-bottom: 30px;
   background-color: #fec601;
   padding: 10px;
-  color: #111;
+  color: var(--light-black);
   border-radius: 5px;
   transition-duration: 0.6s;
   cursor: pointer;
@@ -706,7 +713,7 @@ body {
     margin-bottom: 30px;
     background-color: #fec601;
     padding: 10px;
-    color: #111;
+    color: var(--light-black);
     border-radius: 5px;
     cursor: pointer;
     transition-duration: 0.5s;
@@ -785,17 +792,17 @@ body {
   border: none;
   font-size: 2.6vh;
   background-color: #fec601;
-  color: #111;
+  color: var(--light-black);
   border: none;
   transition-duration: 0.5s;
 }
 .projects > .box > .card_btn > button:hover{
   background-color: rgb(255, 153, 0);
-  box-shadow: 0 0 10px yellow;
+  box-shadow: 0 0 10px var(--Yellow);
 }
 
 .projects > .box > .card_btn > button > a {
-  color: #111;
+  color: var(--light-black);
   border: 1px solid transparent;
   /* transition-duration: 0.5s; */
 }
@@ -867,7 +874,7 @@ body {
 }
 
 #foooter > #copyright {
-  color: yellow;
+  color: var(--Yellow);
   font-size: 15px;
   font-family: cursive;
 }
@@ -876,5 +883,68 @@ body {
   #foooter {
     padding: 10px;
     height: 220px;
+  }
+}
+
+
+
+@-webkit-keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
   }
 }
