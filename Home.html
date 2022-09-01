@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <!-- //css link is here -->
+    <link rel="stylesheet" href="css/Home.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/contact.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+        
+
+    <!-- //favicon link is here  -->
+    <link rel="shortcut icon"
+        href="favicon/favicon.jpg"
+        type="image/x-icon">
+      
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+      
+    
+    <!-- //all firebase link  -->
+    <script
+        src="https://www.gstatic.com/firebasejs/9.9.1/firebase-app-compat.js"></script>
+    <script
+        src="https://www.gstatic.com/firebasejs/9.9.1/firebase-firestore-compat.js"></script>
+    <script
+        src="https://www.gstatic.com/firebasejs/9.9.1/firebase-auth-compat.js"></script>
+
+
+    <!-- //title of the site is here  -->
+    <title>Home : Let'sLearn</title>
+</head>
+
+<body oncontextmenu="return false">
+
+      <!-- //preloader html is here  -->
+      <!-- <div id="preloader"></div> -->
+
+      <div class="container" id="preloader">
+            <div class="ring ring1"><div></div></div>
+            <p>Loading...</p>
+         </div>
+
+
+
+    <!-- //navbar section is here  -->
+    <nav class="navbar" id="navbar">
+
+        <input type="checkbox"
+            name="navbar_responsive_checkbox"
+            id="checkbox_for_nav">
+        <label for="checkbox_for_nav"
+            id="icon_responsive" onclick="show_cross_on_click();" class="icon_responsive"><i
+                class="fa-solid fa-bars"></i></label>
+
+        <label class="logo"><a
+                href="Home.html"><i class="fa-solid fa-book-open-reader" style="margin-right:5px;"></i>Let'sLearn</a></label>
+        <ul class="nav_element">
+            <li><a href="Home.html"
+                    class="element nav_link"><i class="fa-solid fa-house-chimney" style="margin-right:4px;"></i>home</a>
+            </li>
+            <li><a href="#services"
+                    class="element nav_link"><i class="fa-solid fa-briefcase" style="margin-right:4px;"></i>services</a>
+            </li>
+            <li><a href="#about_us"
+                    class="element nav_link"><i class="fa-solid fa-id-card-clip" style="margin-right:4px;"></i>About</a>
+            </li>
+            <li><a href="#contact_us"
+                    class="element nav_link"><i class="fa-solid fa-message" style="margin-right:4px;"></i>contact</a>
+            </li>
+            <li><a onclick="window.location.href = 'index.html';"
+                    class="element" id="logout" href="#"><i class="fa-solid fa-circle-left"></i>Logout</a>
+            </li>
+        </ul>
+
+       
+        <!-- //side bar btn  -->
+            <a href="https://wa.me/918097859158" class="whatsapp_link icon_side_bar" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="tel:+91 8097859158" class="call_link icon_side_bar" target="_blank"><i class="fa-sharp fa-solid fa-phone"></i></a>
+
+
+    </nav>
+
+
+
+    <!-- //header section is here -->
+    <section class="header">
+        <h1><i
+                class="fa-solid fa-book-open-reader"></i>Let's~Learn<i
+                class="fa-solid fa-book-open-reader"></i>
+        </h1>
+        <p>Get Notes And Study According to Your
+            Class,Subject and also Learn Coding
+            And Practice it.</p>
+        <a href="#details"><button type="button"
+            id="lets_learn">Let's~Learn</button></a>
+    </section>
+
+
+
+
+
+
+
+
+
+    <!-- //details of whole site  -->
+    <div class="detail_container" id="details"  data-aos="fade-in">
+       <a href="#service_one_project_section">
+            <div class="detail_box">
+                  <i class="fa-solid fa-code"></i>           
+                  <h3 class="title" id="title">Project + Code</h3>
+                  <p class="captions">Get Awesome Project With Source Code</p>
+              </div>
+       </a>
+        <a href="#service_two_project_section">
+            <div class="detail_box">
+                  <i class="fa-solid fa-file-lines"></i>            
+                  <h3 class="title" id="title1">Coding Cheatsheets</h3>
+                  <p class="captions">Get Cheatsheets To Revise Your Programming Fundamentals.</p>
+              </div>
+        </a>
+       <a href="#service_three_project_section">
+            <div class="detail_box">
+                  <i class="fa-solid fa-display"></i>           
+                  <h3 class="title" id="title2">Online Compilers</h3>
+                  <p class="captions">Get Multi-Langauge Online Compiler to Practice.</p>
+              </div>
+       </a>
+       <a href="#service_four_project_section">
+            <div class="detail_box">
+                  <i class="fa-solid fa-book-open"></i>
+                  <h3 class="title" id="title3">Books + Notes</h3>
+                  <p class="captions">Get TextBooks Of 10th and 12th And Of Degree Collages.</p>
+              </div>
+       </a>
+    </div>
+
+
+
+
+
+    <!-- //services  -->
+    <section class="services" id="services"  data-aos="fade-in">
+
+        <p class="Service_heading"
+            id="service_heading"><i
+                class="fa-solid fa-laptop"
+                style="margin-right: 5px; color: rgb(209, 195, 195);"></i>Services<i
+                class="fa-solid fa-laptop"
+                style="margin-left:5px; color: rgb(209, 195, 195);;"></i>
+        </p>
+
+        <p id="Sub_services_heading"><i
+                class="fa-solid fa-person-arrow-down-to-line"
+                style="margin-right:5px;"></i>Proects
+            + source Code   
+          </p>
+    </section>
+
+
+
+    <!-- //service one  -->
+    <div class="projects service_one_project_section" id="service_one_project_section">
+         <div class="box" data-aos="fade-in">
+               <img src="css/img/color_picker.png" alt="error">
+               <h2 id="card_title">COLOR PICKER</h1>
+               <p class="disricption">color picker to choose colors of your choice.</p>
+               <div class="card_btn">
+                     <button><i class="fa-solid fa-eye"></i><a target ='1' href="https://kanojiya9768.github.io/ColorPicker/">Preview</a></button>
+                     <button><i class="fa-solid fa-code"></i><a target ='1' href="https://github.com/kanojiya9768/ColorPicker">Code</a></button>
+               </div>
+         </div>
+         <div class="box" data-aos="fade-in">
+               <img src="css/img/voiceToText.png" alt="error">
+               <h2 id="card_title">Voice To Text</h1>
+               <p class="disricption">Voice To Text Converter And U Can Also Copy That Text.</p>
+               <div class="card_btn">
+                     <button><i class="fa-solid fa-eye"></i><a target ='1' href="https://kanojiya9768.github.io/Speech_To---TEXT/">Preview</a></button>
+                     <button><i class="fa-solid fa-code"></i><a target ='1' href="https://github.com/kanojiya9768/Speech_To---TEXT">Code</a></button>
+               </div>
+         </div>
+         <div class="box" data-aos="fade-in">
+               <img src="css/img/file_downloader.png" alt="error">
+               <h2 id="card_title">FILE DOWNLOADER</h1>
+               <p class="disricption">enter url of the image,video etc and hit submit,,your download will start.</p>
+               <div class="card_btn">
+                     <button><i class="fa-solid fa-eye"></i><a target ='1' href="https://kanojiya9768.github.io/file_downloader/">Preview</a></button>
+                     <button><i class="fa-solid fa-code"></i><a target ='1' href="https://github.com/kanojiya9768/file_downloader">Code</a></button>
+               </div>
+         </div>
+         <div class="box" data-aos="fade-in">
+               <img src="css/img/cloc.png" alt="error">
+               <h2 id="card_title">DIGITAL CLOCK</h1>
+               <p class="disricption">DIGITAL CLOCK USING HTML CSS AND JS</p>
+               <div class="card_btn">
+                     <button><i class="fa-solid fa-eye"></i><a target ='1' href="https://kanojiya9768.github.io/Awesome_Javascript_digital_clock/">Preview</a></button>
+                     <button><i class="fa-solid fa-code"></i><a target ='1' href="https://github.com/kanojiya9768/Awesome_Javascript_digital_clock">Code</a></button>
+               </div>
+         </div>
+         <div class="box" data-aos="fade-in">
+               <img src="css/img/clock.png" alt="error">
+               <h2 id="card_title">DIGITAL CLOCK</h1>
+               <p class="disricption">DIGITAL CLOCK USING HTML CSS AND JS</p>
+               <div class="card_btn">
+                     <button><i class="fa-solid fa-eye"></i><a target ='1' href="https://kanojiya9768.github.io/CurrentTime.Clock.Com/">Preview</a></button>
+                     <button><i class="fa-solid fa-code"></i><a target ='1' href="https://github.com/kanojiya9768/CurrentTime.Clock.Com">Code</a></button>
+               </div>
+         </div>   
+         <div class="box" data-aos="fade-in">
+               <img src="css/img/calciusefull.png" alt="error">
+               <h2 id="card_title">CALCULATOR</h1>
+               <p class="disricption">SIMPLE MODERN ARITHMETIC CALCULATOR.</p>
+               <div class="card_btn">
+                     <button><i class="fa-solid fa-eye"></i><a target ='1' href="https://kanojiya9768.github.io/calculator/">Preview</a></button>
+                     <button><i class="fa-solid fa-code"></i><a target ='1' href="https://github.com/kanojiya9768/calculator">Code</a></button>
+               </div>
+         </div>   
+         <div class="box" data-aos="fade-in">
+               <img src="css/img/calci_modern.png" alt="error">
+               <h2 id="card_title">CALCULATOR</h1>
+               <p class="disricption">BRAND NEW SIMPLE MODERN CALCULATOR.</p>
+               <div class="card_btn">
+                     <button><i class="fa-solid fa-eye"></i><a target ='1' href="https://kanojiya9768.github.io/Brand_New-Calci/">Preview</a></button>
+                     <button><i class="fa-solid fa-code"></i><a target ='1' href="https://github.com/kanojiya9768/Brand_New-Calci">Code</a></button>
+               </div>
+         </div>   
+         <div class="box" data-aos="fade-in">
+               <img src="css/img/facebook.png" alt="error">
+               <h2 id="card_title">fACEBOOK CLONE</h1>
+               <p class="disricption">facebook's login and signup page clone</p>
+               <div class="card_btn">
+                     <button><i class="fa-solid fa-eye"></i><a target ='1' href="https://kanojiya9768.github.io/FacebookClone/">Preview</a></button>
+                     <button><i class="fa-solid fa-code"></i><a target ='1' href="https://github.com/kanojiya9768/FacebookClone">Code</a></button>
+               </div>
+         </div>   
+         <div class="box" data-aos="fade-in">
+               <img src="css/img/portfolio.png" alt="error">
+               <h2 id="card_title">PORTFOLIO 1</h1>
+               <p class="disricption">its a awesome portfolio website</p>
+               <div class="card_btn">
+                     <button><i class="fa-solid fa-eye"></i><a target ='1' href="https://kanojiya9768.github.io/NewPortfolioWebsite/">Preview</a></button>
+                     <button><i class="fa-solid fa-code"></i><a target ='1' href="https://github.com/kanojiya9768/NewPortfolioWebsite">Code</a></button>
+               </div>
+         </div>   
+         <div class="box" data-aos="fade-in">
+               <img src="css/img/portfolio1.png" alt="error">
+               <h2 id="card_title">PORTFOLIO 2</h1>
+               <p class="disricption">its a awesome portfolio website</p>
+               <div class="card_btn">
+                     <button><i class="fa-solid fa-eye"></i><a target ='1' href="https://kanojiya9768.github.io/My-portfolio/">Preview</a></button>
+                     <button><i class="fa-solid fa-code"></i><a target ='1' href="https://github.com/kanojiya9768/My-portfolio">Code</a></button>
+               </div>
+         </div>   
+         <div class="box" data-aos="fade-in">
+               <img src="css/img/ecommerce.png" alt="error">
+               <h2 id="card_title">E-COMMERCE</h1>
+               <p class="disricption">it is just a static awesome e-commerce site</p>
+               <div class="card_btn">
+                     <button><i class="fa-solid fa-eye"></i><a target ='1' href="https://kanojiya9768.github.io/Kharid-Dar.com/">Preview</a></button>
+                     <button><i class="fa-solid fa-code"></i><a target ='1' href="https://github.com/kanojiya9768/Kharid-Dar.com">Code</a></button>
+               </div>
+         </div>  
+
+         <div class="box" data-aos="fade-in">
+               <img src="css/img/ecommerce2.png" alt="error">
+               <h2 id="card_title">E-COMMERCE SHOES</h1>
+               <p class="disricption">it is just a static awesome e-commerce site for shoes</p>
+               <div class="card_btn">
+                     <button><i class="fa-solid fa-eye"></i><a target ='1' href="https://kanojiya9768.github.io/Kanojiya-s-Nike.com/">Preview</a></button>
+                     <button><i class="fa-solid fa-code"></i><a target ='1' href="https://github.com/kanojiya9768/Kanojiya-s-Nike.com">Code</a></button>
+               </div>
+         </div>   
+         <div class="box" data-aos="fade-in">
+               <img src="css/img/usefull1.png" alt="error">
+               <h2 id="card_title">LOAN CALCULATOR</h1>
+               <p class="disricption">calc loan as per the intereset rate and time duration.</p>
+               <div class="card_btn">
+                     <button><i class="fa-solid fa-eye"></i><a target ='1' href="https://kanojiya9768.github.io/LoanRateCalciByInterestrRateAndMonth/">Preview</a></button>
+                     <button><i class="fa-solid fa-code"></i><a target ='1' href="https://github.com/kanojiya9768/LoanRateCalciByInterestrRateAndMonth">Code</a></button>
+               </div>
+         </div>   
+         <div class="box" data-aos="fade-in">
+               <img src="css/img/big1.png" alt="error">
+               <h2 id="card_title">GOOGLE CLONE</h1>
+               <p class="disricption">IT IS GOOGLE CLONE CREATED BY USING REACT JS.</p>
+               <div class="card_btn">
+                     <button><i class="fa-solid fa-eye"></i><a target ='1' href="https://fir-b303b.firebaseapp.com/all?#">Preview</a></button>
+               </div>
+         </div>   
+         <div class="box" data-aos="fade-in">
+               <img src="css/img/big2.png" alt="error">
+               <h2 id="card_title">NETFLIX CLONE</h1>
+               <p class="disricption">IT IS NETFLIX CLONE CREATED BY USING REACT JS.</p>
+               <div class="card_btn">
+                     <button><i class="fa-solid fa-eye"></i><a target ='1' href="https://netflix-clone-a9f67.firebaseapp.com/">Preview</a></button>
+                     <button><i class="fa-solid fa-code"></i><a target ='1' href="https://github.com/kanojiya9768/netflix-clone">Code</a></button>
+               </div>
+         </div>   
+         <div class="box" data-aos="fade-in">
+               <img src="css/img/chat.png" alt="error">
+               <h2 id="card_title">CHAT APPLICATION</h1>
+               <p class="disricption">IT IS NETFLIX CLONE CREATED BY USING REACT JS.</p>
+               <div class="card_btn">
+                     <button><i class="fa-solid fa-code"></i><a target ='1' href="https://github.com/kanojiya9768/MyChatApp">Code</a></button>
+               </div>
+         </div>   
+         <div class="box" data-aos="fade-in">
+               <img src="css/img/unsplash.png" alt="error">
+               <h2 id="card_title">UNSPLASH CLONE</h1>
+               <p class="disricption">HD 4K IMAGES OR WALLPAPERS DOWNLOADER.</p>
+               <div class="card_btn">
+                <button><i class="fa-solid fa-eye"></i><a target ='1' href="https://kanojiya9768.github.io/MakeGallary.com/">Preview</a></button>
+                     <button><i class="fa-solid fa-code"></i><a target ='1' href="https://github.com/kanojiya9768/MakeGallary.com">Code</a></button>
+               </div>
+         </div>   
+         <div class="box" data-aos="fade-in">
+               <img src="css/img/webcompiler.png" alt="error">
+               <h2 id="card_title">WEB COMPILER</h1>
+               <p class="disricption">IT IS ONLINE COMPILER FOR HTML CSS AND JAVASCRIPT.</p>
+               <div class="card_btn">
+                <button><i class="fa-solid fa-eye"></i><a target ='1' href="https://kanojiya9768.github.io/vishalportfolio.com/Code_Now.html">Preview</a></button>
+               </div>
+         </div>   
+         <div class="box" data-aos="fade-in">
+               <img src="css/img/study1.png" alt="error">
+               <h2 id="card_title">E-LEARNING SITE</h1>
+               <p class="disricption">IT IS E-LEARNING SITE FOR BEGINNER PROGRAMMERS.</p>
+               <div class="card_btn">
+                <button><i class="fa-solid fa-eye"></i><a target ='1' href="https://kanojiya9768.github.io/WebDevAndProgrammingTutotial.com/">Preview</a></button>
+                     <button><i class="fa-solid fa-code"></i><a target ='1' href="https://github.com/kanojiya9768/WebDevAndProgrammingTutotial.com">Code</a></button>
+               </div>
+         </div>   
+         <div class="box" data-aos="fade-in">
+               <img src="css/img/study2.png" alt="error">
+               <h2 id="card_title">E-LEARNING SITE</h1>
+               <p class="disricption">IT IS JUST CODING NOTES E-LEARNING SITE.</p>
+               <div class="card_btn">
+                <button><i class="fa-solid fa-eye"></i><a target ='1' href="https://kanojiya9768.github.io/3Brothers-R-V-K-Tutes.com/">Preview</a></button>
+                     <button><i class="fa-solid fa-code"></i><a target ='1' href="https://github.com/kanojiya9768/3Brothers-R-V-K-Tutes.com">Code</a></button>
+               </div>
+         </div>   
+         <div class="box" data-aos="fade-in">
+               <img src="css/img/STORE.png" alt="error">
+               <h2 id="card_title">AUTOREPAIR SITE</h1>
+               <p class="disricption">IT IS AUTO-REPAIRING STORE WEBISITE.</p>
+               <div class="card_btn">
+                <button><i class="fa-solid fa-eye"></i><a target ='1' href="https://kanojiya9768.github.io/Autorepair.com/">Preview</a></button>
+                     <button><i class="fa-solid fa-code"></i><a target ='1' href="https://github.com/kanojiya9768/Autorepair.com">Code</a></button>
+               </div>
+         </div>   
+         <div class="box" data-aos="fade-in">
+               <img src="css/img/text_util.png" alt="error">
+               <h2 id="card_title">TEXT-UTILS</h1>
+               <p class="disricption">IT IS SIMPLE TEXT-EDITOR CREATED BY USING REACT JS.</p>
+               <div class="card_btn">
+                  <button><i class="fa-solid fa-code"></i><a target ='1' href="https://text-utils-d53af.web.app/">Preview</a></button>
+               </div>
+         </div>   
+         <div class="box" data-aos="fade-in">
+               <img src="css/img/QUOTES.png" alt="error">
+               <h2 id="card_title">GET_QUOTES</h1>
+               <p class="disricption">GET NEW NEW QUOTES WHEN U CLICK ON THE BUTTON.</p>
+               <div class="card_btn">
+                <button><i class="fa-solid fa-code"></i><a target ='1' href="https://kanojiya9768.github.io/get_quotes/">Preview</a></button>
+                <button><i class="fa-solid fa-code"></i><a target ='1' href="https://github.com/kanojiya9768/get_quotes">Code</a></button>
+               </div>
+         </div>   
+         <div class="box" data-aos="fade-in">
+               <img src="css/img/resume.png" alt="error">
+               <h2 id="card_title">RESUME BUILDER</h1>
+               <p class="disricption">RESUME BUILDER SITE WHERE U CAN MAKE YOUR CV.</p>
+               <div class="card_btn">
+                     <button><i class="fa-solid fa-code"></i><a target ='1' href="https://kanojiya9768.github.io/Resume-Builder/">Preview</a></button>
+                     <button><i class="fa-solid fa-code"></i><a target ='1' href="https://github.com/kanojiya9768/Resume-Builder">Code</a></button>
+               </div>
+         </div>   
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- //service two heading  -->
+    <div class="services" id="services" style="margin-top:20px;" data-aos="fade-in">
+
+      <p id="Sub_services_heading"><i
+              class="fa-solid fa-person-arrow-down-to-line"
+              style="margin-right:5px;"></i>Programming Cheatsheets   
+        </p>
+  </div>
+
+  <!-- //service two  -->
+  <div class="projects service_one_project_section" id="service_two_project_section">
+    <div class="box" data-aos="fade-in">
+          <img src="css/img/html_favicon.jpg" alt="error">
+          <h2 id="card_title">HTML5</h1>
+          <p class="disricption">HTML5 Cheatsheet to revise fundamentals</p>
+          <div class="card_btn">
+                <button><i class="fa-solid fa-eye"></i><a target ='1' href="cheatsheet/html_Cheat.html">Read..</a></button>
+          </div>
+    </div>
+    <div class="box" data-aos="fade-in">
+          <img src="css/img/css_favicon.png" alt="error">
+          <h2 id="card_title">CSS3</h1>
+          <p class="disricption">CSS3 Cheatsheet to revise fundamentals</p>
+          <div class="card_btn">
+                <button><i class="fa-solid fa-eye"></i><a target ='1' href="cheatsheet/css_cheat.html">Read..</a></button>
+          </div>
+    </div>
+    <div class="box" data-aos="fade-in">
+          <img src="css/img/js_favicon.png" alt="error">
+          <h2 id="card_title">JAVASCRIPT</h1>
+          <p class="disricption">Javascript Cheatsheet to revise fundamentals</p>
+          <div class="card_btn">
+                <button><i class="fa-solid fa-eye"></i><a target ='1' href="cheatsheet/js_cheat.html">Read..</a></button>
+          </div>
+    </div>   
+    <div class="box" data-aos="fade-in">
+          <img src="css/img/java.png" alt="error">
+          <h2 id="card_title">JAVA</h2>
+          <p class="disricption">JAVA Cheatsheet to revise fundamentals</p>
+          <div class="card_btn">
+                <button><i class="fa-solid fa-eye"></i><a target ='1' href="cheatsheet/java_cheatsheet.html">Read..</a></button>
+          </div>
+    </div>   
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- //service three heading  -->
+<div class="services" id="services" style="margin-top:20px;" data-aos="fade-in">
+
+      <p id="Sub_services_heading"><i
+              class="fa-solid fa-person-arrow-down-to-line"
+              style="margin-right:5px;"></i>ONLINE COMPILERS   
+        </p>
+  </div>
+
+  <!-- //service two  -->
+  <div class="projects service_three_project_section" id="service_three_project_section">
+    <div class="box" data-aos="fade-in">
+          <img src="services/compilers/img/c_fav.png" alt="error">
+          <h2 id="card_title">C COMPILER</h1>
+          <p class="disricption">C LANGAUGE ONLINE COMPILER THAT U CAN REFER TO PRACTICE.</p>
+          <div class="card_btn">
+                <button><i class="fa-solid fa-eye"></i><a target ='1' href="services/compilers/c.html">Read..</a></button>
+          </div>
+    </div>
+    <div class="box" data-aos="fade-in">
+          <img src="services/compilers/img/c++.jpg" alt="error">
+          <h2 id="card_title">C++ COMPILER</h1>
+          <p class="disricption">C++ ONLINE COMPILER THAT U CAN REFER TO PRACTICE.</p>
+          <div class="card_btn">
+                <button><i class="fa-solid fa-eye"></i><a target ='1' href="services/compilers/c++.html">Read..</a></button>
+          </div>
+    </div>
+    <div class="box" data-aos="fade-in">
+          <img src="services/compilers/img/java.png" alt="error">
+          <h2 id="card_title">JAVA COMPILER</h1>
+          <p class="disricption">JAVA ONLINE COMPILER THAT U CAN REFER TO PRACTICE.</p>
+          <div class="card_btn">
+                <button><i class="fa-solid fa-eye"></i><a target ='1' href="services/compilers/java.html">Read..</a></button>
+          </div>
+    </div>   
+    <div class="box" data-aos="fade-in">
+          <img src="services/compilers/img/python_fav.jpg" alt="error">
+          <h2 id="card_title">PYTHON COMPILER</h2>
+          <p class="disricption">PYTHON ONLINE COMPILER THAT U CAN REFER TO PRACTICE.</p>
+          <div class="card_btn">
+                <button><i class="fa-solid fa-eye"></i><a target ='1' href="services/compilers/python.html">Read..</a></button>
+          </div>
+    </div>   
+    <div class="box" data-aos="fade-in">
+          <img src="services/compilers/img/javascript.png" alt="error">
+          <h2 id="card_title">JAVASCRIPT COMPILER</h2>
+          <p class="disricption">JAVASCRIPT ONLINE COMPILER THAT U CAN REFER TO PRACTICE.</p>
+          <div class="card_btn">
+                <button><i class="fa-solid fa-eye"></i><a target ='1' href="services/compilers/javascript.html">Read..</a></button>
+          </div>
+    </div>   
+    <div class="box" data-aos="fade-in">
+          <img src="services/compilers/img/php.jpg" alt="error">
+          <h2 id="card_title">PHP COMPILER</h2>
+          <p class="disricption">PHP ONLINE COMPILER THAT U CAN REFER TO PRACTICE.</p>
+          <div class="card_btn">
+                <button><i class="fa-solid fa-eye"></i><a target ='1' href="services/compilers/PHP.html">Read..</a></button>
+          </div>
+    </div>   
+    <div class="box" data-aos="fade-in">
+          <img src="services/compilers/img/web.png" alt="error">
+          <h2 id="card_title">WEB COMPILER</h2>
+          <p class="disricption">SIMPLE WEB DEVELOPMENT ONLINE COMPILER OF HTML CSS AND JS.</p>
+          <div class="card_btn">
+                <button><i class="fa-solid fa-eye"></i><a target ='1' href="https://kanojiya9768.github.io/vishalportfolio.com/Code_Now.html">Read..</a></button>
+          </div>
+    </div>   
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- //service four heading  -->
+<div class="services" id="services" style="margin-top:20px;" data-aos="fade-in">
+
+      <p id="Sub_services_heading"><i
+              class="fa-solid fa-person-arrow-down-to-line"
+              style="margin-right:5px;"></i>BOOKS AND NOTES   
+        </p>
+  </div>
+
+  <!-- //service two  -->
+  <div class="projects service_four_project_section" id="service_four_project_section">
+    <div class="box" data-aos="fade-in">
+          <img src="css/img/10th.jpg" alt="error">
+          <h2 id="card_title">10TH Books</h1>
+          <p class="disricption">10th SSC maharashtra State board TextBooks.</p>
+          <div class="card_btn">
+                <button><i class="fa-solid fa-eye"></i><a target ='1' href="services/10th/10th.html">Read..</a></button>
+          </div>
+    </div>
+    <div class="box" data-aos="fade-in">
+          <img src="css/img/12th.jpg" alt="error">
+          <h2 id="card_title">12TH Science</h1>
+          <p class="disricption">12th Science HSC maharashtra State board TextBooks.</p>
+          <div class="card_btn">
+                <button><i class="fa-solid fa-eye"></i><a target ='1' href="#">Read..</a></button>
+          </div>
+    </div>
+    <div class="box" data-aos="fade-in">
+          <img src="css/img/12th.jpg" alt="error">
+          <h2 id="card_title">12TH Commerce</h1>
+          <p class="disricption">12th Commerce HSC maharashtra State board TextBooks.</p>
+          <div class="card_btn">
+                <button><i class="fa-solid fa-eye"></i><a target ='1' href="#">Read..</a></button>
+          </div>
+    </div>   
+    <div class="box" data-aos="fade-in">
+          <img src="css/img/Bsc-CS.jpg" alt="error">
+          <h2 id="card_title">BSC CS</h2>
+          <p class="disricption">Mumbai University BSC CS BOOKS AND NOTES.</p>
+          <div class="card_btn">
+                <button><i class="fa-solid fa-eye"></i><a target ='1' href="#">Read..</a></button>
+          </div>
+    </div>   
+    <div class="box" data-aos="fade-in">
+          <img src="css/img/bsc-it.jpg" alt="error">
+          <h2 id="card_title">BSC IT</h2>
+          <p class="disricption">Mumbai University BSC IT BOOKS AND NOTES.</p>
+          <div class="card_btn">
+                <button><i class="fa-solid fa-eye"></i><a target ='1' href="#">Read..</a></button>
+          </div>
+    </div>   
+</div>
+
+
+
+
+
+<!-- //about us  -->
+<section id="about_us">
+      <p class="about_heading" id="_heading">*_ABOUT ME_*</p>
+
+      <div class="about_us_grid">
+            <div class="img" data-tilt>
+                  <img src="css/img/my_photo_transparent.png" alt="My_image">
+            </div>
+            <div class="about_me_details">
+                  <p id="head_about">About</p>
+                  <p class="line"></p>
+                  <p class="intro"><span style="font-size:25px; font-weight: 600;">H</span>ello This Is Vishal Brijesh Kanojiya..I Am The Owner And The Founder Of This Site and I am From <span>`Mumbai Maharashtra India`</span> and I am also a Studend Of Third Year Bsc Computer Science and Studying from South Indian Education society Which Is In Nerul Navi Mumbai India and This Is One The Top College In Navi Mumbai and I am Full Stack Web Developer..!</p> 
+                  <p style="font-family: Arial, Helvetica, sans-serif; font-weight: 600; margin: 10px 0px; color: #fff;">Thanks U For Visiting My Site.</p>
+                  
+                  <div class="hire_me">
+                        <p>Hire Me</p>
+                        <div class="button">    
+                             <a href="https://wa.me/918097859158" class="whatsapp" target="_blank" title="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+                              <a href="tel:+91 8097859158" class="calling" target="_blank" title="Calling"><i class="fa-sharp fa-solid fa-phone"></i></a>
+                              <a href="mailto:kanojiya9768@gmail.com" class="Mailme" title="Gmail"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                  </div>
+
+            </div>
+      </div>
+</section>
+
+
+
+
+
+
+
+<section id="contact_section">
+      
+<!-- //contact us  -->
+<p class="contact_heading" id="contact_heading">*_Contact Us_*</p>
+<p class="contact_caption" id="contact_caption">Feel Free To Contact Us Anytime.</p>
+<div class="contact_us" id="contact_us">
+      <div class="map_left" data-aos="slide-right">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.0206564139485!2d73.00229461567122!3d19.10674972069078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c0da92c5f5a3%3A0x313dd319d3d4b3bf!2s578%2C%20Sector%204%2C%20Kopar%20Khairane%2C%20Navi%20Mumbai%2C%20Maharashtra%20400709!5e0!3m2!1sen!2sin!4v1660465658373!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <form class="contact_form" id="contact_form" autocomplete="off" data-aos="fade-in">
+            <p class="contact_right_head">Contact Now <i class="fa-solid fa-comment-dots" style="margin-left:2px;"></i></p>
+            <input type="text" placeholder="Enter Name" id="name" required>
+            <input type="email" placeholder="Enter Email id" id="email" required>
+            <input type="number" placeholder="Enter Number" id="number" required>
+            <textarea name="message" id="message" placeholder="Enter Your Message.." required></textarea>
+            <input type="submit" id="submit" class="contact_submit">
+      </form>
+</div>
+
+</section>
+
+
+
+<!-- //alert box is here  -->
+<div id="alertBox">
+      <p id="alert_error_msg" style="text-align:center;">😀 Your Have Sent Your Message Successfully...!</p>
+      <div class="alert_btn">
+          <button><a onclick="window.location.reload();" id="Okay_link_alert">Okay</a></button>
+      </div>
+  </div>
+
+
+
+
+
+
+
+
+<!-- //footer is here  -->
+<footer id="foooter">
+      <p id="head">Let's~Learn</p>
+      <p id="desription">Let's Learn Is E-learning Site Where U can Get BOOKS + NOTES + CODING CHEATSHEETS + ONLINE COMPILERS.
+            <div class="footer_icon">
+            <div class="insa" onclick="window.location.href = `https://www.instagram.com/the_vishal_kanojiya/` "><i class="fa-brands fa-square-instagram"></i></div>
+            <div class="insa" onclick="window.location.href = `https://www.facebook.com/The.vishal.kanojiya/` "><i class="fa-brands fa-square-facebook"></i></div>
+            <div class="Tweeter"><i class="fa-brands fa-square-twitter" onclick="window.location.href = `https://twitter.com/VishalBrijeshk2` "></i></div>
+            <div class="linkdin" onclick="window.location.href = `https://www.linkedin.com/in/vishal-brijesh-kanojiya-a288a1200/`"><i class="fa-brands fa-linkedin"></i></div>
+            <div class="whatsapp" onclick="window.location.href = `https://wa.me/918097859158`"><i class="fa-brands fa-square-whatsapp"></i></div>
+      </div>
+      <p id="copyright">copyright &copy; By Vishal Kanojiya.</p>
+</footer>
+
+
+
+
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/Home.js"></script>
+
+    <script>
+      var loader = document.getElementById('preloader');
+
+      window.addEventListener('load',()=>{
+            loader.style.display = 'none';
+      });
+    </script>
+
+<script src="js/service_choice.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init(
+      {
+            offset: 105,
+            duration:1400,
+            easing: 'ease'
+      }
+  );
+
+
+</script>
+
+<script src="js/vanilla-tilt.min.js"></script>
+
+</body>
+
+</html>
