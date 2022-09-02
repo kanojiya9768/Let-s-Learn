@@ -639,6 +639,7 @@ body {
 .detail_container > a {
   text-decoration: none;
   color: #000;
+  -webkit-animation: tilt 1s infinite forwards ease-in-out;
   animation: tilt 1s infinite forwards ease-in-out;
   animation-direction: alternate;
   -webkit-clip-path: polygon(
@@ -677,6 +678,14 @@ body {
   transition-duration: 0.5s;
 }
 
+@-webkit-keyframes tilt {
+  0% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
 @keyframes tilt {
   0% {
     transform: rotate(5deg);
@@ -793,8 +802,7 @@ body {
 
 .projects > .box {
   max-width: 100%;
-  min-height: 450px;
-  max-height: 550px;
+  height: 450px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
