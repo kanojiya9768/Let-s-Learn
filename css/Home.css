@@ -301,6 +301,14 @@ body {
   font-size: 25px;
 }
 
+.mail_link{
+  position: absolute;
+  top: 550px;
+  right: 10px;
+  line-height: 45px;
+  font-size: 25px;
+}
+
 .icon_side_bar > i{
   color: #fff;
 }
