@@ -285,9 +285,10 @@ body {
 }
 
 
+
 .whatsapp_link{
   position: absolute;
-  top: 500px;
+  top: 410px;
   right: 10px;
   line-height: 45px;
   font-size:30px;
@@ -295,7 +296,7 @@ body {
 
 .call_link{
   position: absolute;
-  top: 570px;
+  top: 480px;
   right: 10px;
   line-height: 45px;
   font-size: 25px;
