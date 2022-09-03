@@ -220,6 +220,7 @@ body {
 
 /* //side bar icons */
 .icon_side_bar{
+  position: relative;
   width: 50px;
   height: 50px;
   background-color:var(--green);
@@ -285,6 +286,34 @@ body {
   }
 }
 
+
+.icon_side_bar::before{
+  content: attr(data-tooltip);
+  width: 75px;
+  height: 25px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-right: 15px;
+  line-height: 25px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+  background-color:green;
+  color: #fff;
+  position: absolute;
+  right: 45px;
+
+  -webkit-clip-path: polygon(0% 1%, 82% 0, 83% 30%, 100% 43%, 84% 52%, 84% 100%, 0% 100%); clip-path: polygon(0% 1%, 82% 0, 83% 30%, 100% 43%, 84% 52%, 84% 100%, 0% 100%);
+
+  /* //hide the tooltip now because we have to show this when user hover on button  */
+  transform: scale(0);
+  transform-origin: right;
+  transition-duration: .2s;
+}
+
+.icon_side_bar:hover::before{
+  transform: scale(1);
+}
 
 
 
