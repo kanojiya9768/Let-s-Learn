@@ -109,7 +109,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 .about_us_grid > .about_me_details > .hire_me > .button > a{
@@ -121,7 +121,34 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    position: relative;
 }
+
+.about_us_grid > .about_me_details > .hire_me > .button > a::before{
+    content : attr(data-tooltip);
+    width: 100%;
+    height: 25px;
+    position: absolute;
+    top: 55px;
+    padding: 6px 10px;
+    text-align: center;
+    line-height: 25px;
+    background-color: #FCE601;
+    color:#111;
+    border-radius: 10px;
+
+       /* //hide the tooltip now  */
+   transform: scale(0);
+   transform-origin: top center;
+   transition: .2s;
+}
+
+.about_us_grid > .about_me_details > .hire_me > .button > a:hover::before{
+    transform: scale(1);
+}
+
+
 
 .about_us_grid > .about_me_details > .hire_me > .button > a > i{
     font-size: 30px;
@@ -139,3 +166,4 @@
        grid-gap: 30px;
     }
 }
+
