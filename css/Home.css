@@ -51,6 +51,8 @@ body {
   -webkit-animation: bounce-in-top 1.1s both;
   animation: bounce-in-top 1.1s both;
 
+  overflow-x: hidden;
+
 }
 
 
@@ -286,7 +288,6 @@ body {
   }
 }
 
-
 .icon_side_bar::before{
   content: attr(data-tooltip);
   width: 75px;
@@ -314,6 +315,7 @@ body {
 .icon_side_bar:hover::before{
   transform: scale(1);
 }
+
 
 
 
@@ -467,9 +469,13 @@ body {
 @media (max-width: 1150px) {
   .logo {
     position: absolute;
-    font-size: 30px;
+    font-size: 27px;
     top: 0px;
     right: 0px;
+  }
+
+  .logo > a > i{
+    font-size: 25px;
   }
 
   .navbar {
@@ -514,6 +520,10 @@ body {
     color: #000;
   }
 }
+
+
+
+
 
 
 
@@ -762,6 +772,17 @@ body {
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
 /* //services section is here  */
 .services {
   width: 100%;
@@ -817,54 +838,85 @@ body {
   }
 }
 
+
+
+
+
+
+
+
+
+
+
 /* //service one projects css is here  */
 .projects {
   width: 90%;
   margin: 50px auto;
-  /* border: 2px solid #fff; */
   padding: 10px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 40px;
-  /* transition-duration: 0.5s; */
 }
 
 .projects > .box {
   max-width: 100%;
-  height: 450px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   border-radius: 10px;
-  /* transition-duration: 1s; */
   cursor: pointer;
-
   background-image:#000;
   border: 10px solid transparent;
   border-image:radial-gradient(circle, #ffbc00, #ffc800, #ffd400, #ffe100, #ffed00, #ffe900, #ffe600, #ffe200, #ffce00, #ffb900, #ffa500, #ff9000);
   border-image-slice: 1;
-  }
+  object-fit: cover;
+
+  position: relative;
+}
+
+.projects > .box > .box2{
+  width:100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  top: 0;
+
+  transform: scale(0);
+  transform-origin: bottom right;
+  transition: .5s;
+}
+
+.projects > .box:hover > .box2{
+  transform: scale(1);
+}
 
 .projects > .box > img {
   width: 100%;
-  height: 60%;
+  height: 100%;
   object-fit: cover;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
 
-.projects > .box > h2 {
+.projects > .box > .box2 > h2 {
   text-transform: capitalize;
   text-align: center;
   font-size: 25px;
-  margin: 10px auto;
+  margin: 0px auto 10px auto;
   color: #ffffff;
   /* transition-duration: 0.5s; */
   font-family: "Times New Roman", Times, serif;
 }
 
-.projects > .box > p {
-  margin: 10px 20px;
+.projects > .box > .box2 > p {
+  padding: 0px 10px;
+  text-align: center;
   text-align: center;
   color: rgb(216, 219, 219);
   text-transform: capitalize;
@@ -873,14 +925,15 @@ body {
   font-family: "Courier New", Courier, monospace;
 }
 
-.projects > .box > .card_btn {
+.projects > .box > .box2 > .card_btn {
   display: flex;
+  flex-direction: column;
   gap: 10px;
   justify-content: center;
   margin-bottom: 15px;
 }
 
-.projects > .box > .card_btn > button {
+.projects > .box  > .box2 > .card_btn > button {
   min-width: 120px;
   max-width: 380px;
   padding: 8px;
@@ -894,12 +947,12 @@ body {
   border: none;
   transition-duration: 0.5s;
 }
-.projects > .box > .card_btn > button:hover{
+.projects > .box > .box2 > .card_btn > button:hover{
   background-color: rgb(255, 153, 0);
   box-shadow: 0 0 10px var(--Yellow);
 }
 
-.projects > .box > .card_btn > button > a {
+.projects > .box  > .box2 > .card_btn > button > a {
   color: var(--light-black);
   border: 1px solid transparent;
   /* transition-duration: 0.5s; */
@@ -910,14 +963,14 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .projects > .box > h2 {
+  .projects > .box > .box2 > h2 {
     font-size: 20px;
   }
-  .projects > .box > p {
+  .projects > .box > .box2 > p {
     font-size: 16px;
   }
 
-  .projects > .box > .card_btn > button {
+  .projects > .box > .box2 > .card_btn > button {
     font-size: 2.2vh;
   }
 }
@@ -927,6 +980,13 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+
+
+
+
+
+
 
 /* footer css is here  */
 #foooter {
