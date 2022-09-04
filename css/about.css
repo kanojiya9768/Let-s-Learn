@@ -55,15 +55,64 @@
     font-family:Georgia, 'Times New Roman', Times, serif;
     text-transform:uppercase;
     color: #fff;
+
+    position: relative;
 }
 
+.about_us_grid > .about_me_details > #head_about::before{
+    content:'';
+    position : absolute;
+    top:0;
+    bottom : 0;
+    left : 0;
+    right : 0;
+    width: 155px;
+    background-color: #111;
+    border-left : 2px solid #ddd;
+
+    animation : reveals 1.8s steps(15) forwards infinite;
+    animation-fill-mode: both;
+    animation-direction: alternate;
+}
+
+@keyframes reveals {
+    to{
+        left:160px;
+    }
+}
+
+
+
 .about_us_grid > .about_me_details > .line{
-    width: 60%;
+    width: 70%;
     height: 10px;
     background-color: #FCE601;
     box-shadow: 0px 0px 6px yellow;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 30px;
+
+    position: relative;
+}
+
+.about_us_grid > .about_me_details > .line::before{
+    content: '';
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    top:-10px;
+    bottom :0;
+    left:0;
+    right:0;
+    background-color: #111;
+
+    animation: reveal_line 2s linear infinite;
+    animation-direction: alternate;
+}
+
+@keyframes reveal_line {
+    to{
+        left: 100%;
+    }
 }
 
 .about_us_grid > .about_me_details > .intro{
