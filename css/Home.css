@@ -1043,3 +1043,28 @@ body {
     height: 220px;
   }
 }
+
+
+
+
+
+
+/* //scroll to top */
+#scroll_to_top{
+  position:sticky;
+  inset: auto auto 1rem .5rem;
+
+  padding: 10px;
+  background-color: green;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 2.9vh;
+  text-align: center;
+
+  transition-duration: .5s;
+}
+
+#scroll_to_top:hover{
+  background-color: rgb(0, 207, 0);
+  color: black;
+}
