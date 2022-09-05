@@ -895,10 +895,14 @@ body {
   transform: translateY(100%);
   transform-origin : bottom;
   transition: .5s ease-in-out;
+	
+/*   text opacity to zero  */
+  opacity : 0;
 }
 
 .projects > .box:hover > .box2{
   transform : translateY(0%);
+  opacity : 1;
 }
 
 
