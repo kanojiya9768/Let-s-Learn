@@ -37,13 +37,14 @@
     <title>Login : Let'sLearn</title>
 </head>
 
-<body oncontextmenu="return false">
+<body>
 
 
     <form id="Login" autocomplete="off">
         <p class="Heading">Login</p>
-        <input id="email" type="email"
-            placeholder="Enter Email id" pattern="[a-zA-Z0-9._+-]+@[gG]+mail.com" title="Pls Enter Valid Email id.!" required>
+         
+            <input id="email" type="email"
+            placeholder="Enter Email id" required pattern="[a-zA-Z0-9._+-]+@[gG]+mail.com" title="Pls Enter Valid Email id.!">
 
             <div class="password">
                 <input id="password" type="password"
@@ -84,7 +85,7 @@
         <p id="alert_error_msg" style="text-align:center;">🤔I Think You Have Forgot Your Password Or May Be This User Does Not Exist...?</p>
         <div class="alert_btn">
             <button id="btn1"><a href="Reset.html">Reset Password</a></button>
-            <button><a onclick="window.location.reload();" id="Okay_link_alert">Okay</a></button>
+            <button><a href="index.html" id="Okay_link_alert">Okay</a></button>
         </div>
     </div>
 
@@ -108,11 +109,13 @@
             } else {
                 password.type = "password";
             }
-          
+
+                        
             //hide this icon and show other icon
             icon.style.display = 'none';
-            document.getElementById('hide_pass').style.display = 'inline-block';
+            document.getElementById('hide_pass').style.display = 'inline-block'
         }
+
 
         function hide() {
             let icon = document.getElementById('hide_pass');
@@ -125,10 +128,13 @@
                 password.type = "password";
             }
 
+
               //hide this icon and show other icon
               icon.style.display = 'none';
-              document.getElementById('show_pass').style.display = 'inline-block';
+              document.getElementById('show_pass').style.display = 'inline-block'
         }
+
     </script>
 </body>
+
 </html>
