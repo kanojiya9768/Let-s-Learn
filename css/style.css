@@ -1,140 +1,316 @@
-<!DOCTYPE html>
-<html lang="en">
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible"
-        content="IE=edge">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+body{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.8),rgba(0,0,0,.8));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    <!-- //css link is here -->
-    <link rel="stylesheet" href="css/style.css">
+form{
+    width:400px;
+    height: 500px;
+    background-color: rgba(0,0,0,.7);
+    box-shadow: 0 0 5px 5px black;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    border-radius: 10px;
 
-    <!-- //favicon link is here  -->
-    <link rel="shortcut icon"
-        href="favicon/favicon.jpg"
-        type="image/x-icon">
+    text-align: center;
 
-
-        
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer" />
-
-
-    <!-- //all firebase link  -->
-    <script
-        src="https://www.gstatic.com/firebasejs/9.9.1/firebase-app-compat.js"></script>
-    <script
-        src="https://www.gstatic.com/firebasejs/9.9.1/firebase-firestore-compat.js"></script>
-    <script
-        src="https://www.gstatic.com/firebasejs/9.9.1/firebase-auth-compat.js"></script>
-
-    <!-- //title of the site is here  -->
-    <title>Login : Let'sLearn</title>
-</head>
-
-<body>
+    animation: flip-in-hor-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
 
 
-    <form id="Login" autocomplete="off">
-        <p class="Heading">Login</p>
-         
-            <input id="email" type="email"
-            placeholder="Enter Email id" required>
+@keyframes flip-in-hor-bottom {
+    0% {
+      -webkit-transform: rotateX(80deg);
+              transform: rotateX(80deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotateX(0);
+              transform: rotateX(0);
+      opacity: 1;
+    }
+  }
 
-            <div class="password">
-                <input id="password" type="password"
-                    placeholder="Enter password"
-                    required>
-                    
-                    <i
-                    class="fa-solid fa-eye"
-                    id="show_pass" style="color:#fff; cursor: pointer;"
-                    onclick="show();"></i> 
-                    
-                    <i
-                    class="fa-solid fa-eye-low-vision"
-                    id="hide_pass"
-                    style="color:#fff; display: none; cursor: pointer;"
-                    onclick="hide();"></i>
-            </div>
-
-            <div class="captch">
-                <h4 style="color:#fff;" id="catchaval"></h4>
-                <input type="text" id="captcha_input" placeholder="Enter captch"> 
-            </div>
-
-        <button type="submit"
-            class="waves-effect waves-light btn">Login</button>
-
-        <p class="Already">Don't have an account :
-            <a href="Register.html">Register</a>
-        </p>
-        <p class="Already">Forgot password : <a
-                href="Reset.html">Reset</a></p>
-
-    </form>
+form > .Heading{
+    color: #FCE601;
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+}
 
 
-    <!-- //alert box is here  -->
-    <div id="alertBox">
-        <p id="alert_error_msg" style="text-align:center;">🤔I Think You Have Forgot Your Password Or May Be This User Does Not Exist...?</p>
-        <div class="alert_btn">
-            <button id="btn1"><a href="Reset.html">Reset Password</a></button>
-            <button><a onclick="window.location.reload();" id="Okay_link_alert">Okay</a></button>
-        </div>
-    </div>
+.password{
+    width: 90%;
+    gap: 5px;
+}
 
+input{
+    width: 80%;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 50px;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid yellow;
+    outline: none;
+    background-color: transparent;
+    font-size: 3vh;
+    transition-duration: .4s;
+}
 
-    <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
-    <script src="js/login.js"></script>
+input:hover{
+    background-color: black;
+}
 
 
 
-    
-    <!-- //script for show and hide password  -->
-    <script>
-        function show() {
-            let icon = document.getElementById('show_pass');
+.mail{
+    position: relative;
+}
 
-            let password = document.getElementById('password');
-
-            if (password.type == "password") {
-                password.type = "text";
-            } else {
-                password.type = "password";
-            }
-
-                        
-            //hide this icon and show other icon
-            icon.style.display = 'none';
-            document.getElementById('hide_pass').style.display = 'inline-block'
-        }
+.mail > input + i{
+    font-size: 4vh;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    border-radius: 99px;
+    color: black;
+    opacity: 0;
+    border: 1px solid red;
+    background-color: red;
+}
 
 
-        function hide() {
-            let icon = document.getElementById('hide_pass');
-
-            let password = document.getElementById('password');
-
-            if (password.type == "password") {
-                password.type = "text";
-            } else {
-                password.type = "password";
-            }
 
 
-              //hide this icon and show other icon
-              icon.style.display = 'none';
-              document.getElementById('show_pass').style.display = 'inline-block'
-        }
 
-    </script>
-</body>
+/* //validation to emails field */
+input[type='email']:hover:invalid{
+    border:2px solid red;
+    box-shadow: 0px 0px 5px red;
+    border-radius: 5px;
+}
 
-</html>
+input[type='email']:hover:invalid + i{
+    opacity: 1;
+}
+
+
+input[type='email']:hover:valid{
+    border: 2px solid rgb(9, 233, 9);
+    box-shadow: 0px 0px 5px rgb(9, 233, 9);
+    border-radius: 5px;
+}
+
+input[type='email']:hover:valid + i{
+    display: none;
+}
+
+
+
+
+::-webkit-input-placeholder{
+    color: #fff;
+}
+
+
+button{
+    width: 40%;
+    padding: 8px;
+    font-size: 2.8vh;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: orange;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition-duration: .8s;
+}
+
+button:hover{
+    background-color: yellow;
+}
+
+.Already{
+    color:rgb(185, 209, 232);
+    margin-bottom: 10px;
+}
+
+.Already > a{
+    text-decoration: none;
+    color: #FCE601;
+}
+
+.captch{
+    width: 80%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 30px;
+}
+
+
+.captch > h4{
+    background-color: black;
+    line-height: 30px;
+    width: 100px;
+    text-align: center;
+}
+
+.captch > input:hover{
+    background-color: transparent;
+}
+
+
+@media (max-width:608px) {
+    form{
+        width: 300px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* //alert box  */
+#alertBox{
+    background-color: rgba(0,0,0,.7);
+    border: 1px solid rgba(0,174,255);
+    width: 400px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+
+    display: none;
+    animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+@keyframes shake-horizontal {
+    0%,
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70% {
+      -webkit-transform: translateX(-10px);
+              transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60% {
+      -webkit-transform: translateX(10px);
+              transform: translateX(10px);
+    }
+    80% {
+      -webkit-transform: translateX(8px);
+              transform: translateX(8px);
+    }
+    90% {
+      -webkit-transform: translateX(-8px);
+              transform: translateX(-8px);
+    }
+  }
+
+#alertBox > p{
+    font-size: 3vh;
+    color: #fff;
+    margin: 20px auto;
+    padding: 5px;
+}
+
+#alertBox > .alert_btn{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#alertBox > .alert_btn > :nth-child(1){
+    width:200px;
+    transition-duration: .5s;
+}
+
+#alertBox > .alert_btn > :nth-child(1) > a{
+    text-decoration: none;
+    color: #111;
+}
+
+#alertBox > .alert_btn > :nth-child(2){
+    width:150px;
+    transition-duration: .5s;
+}
+
+#alertBox > .alert_btn > :nth-child(1):hover{
+    background-color: aqua;
+    color: #111;
+}
+
+#alertBox > .alert_btn > :nth-child(2):hover{
+    background-color: aqua;
+    color: #111;
+}
+
+
+#alertBox > .alert_btn  > button > a{
+    text-decoration: none;
+    color: #111;
+}
+
+
+@media (max-width:750px) {
+    #alertBox{
+        width: 330px;
+    }
+
+    #alertBox > p{
+        font-size: 2.7vh;
+        text-align: center;
+    }
+
+    #alertBox > .alert_btn > :nth-child(1){
+        width: 150px;
+        font-size: 2vh;
+    }
+    #alertBox > .alert_btn > :nth-child(2){
+        width: 120px;
+        font-size: 2vh;
+    }
+}
+
+
+
