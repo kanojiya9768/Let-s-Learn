@@ -82,23 +82,16 @@ input:hover{
 
 
 
-.mail{
-    position: relative;
+
+
+input[type='email']:focus{
+    border : 2px solid #fff;
+    border-radius : 5px;
 }
-
-.mail > input + i{
-    font-size: 4vh;
-    height: 30px;
-    width: 30px;
-    line-height: 30px;
-    border-radius: 99px;
-    color: black;
-    opacity: 0;
-    border: 1px solid red;
-    background-color: red;
+input[type='password']:focus{
+    border : 2px solid #fff;
+    border-radius : 5px;
 }
-
-
 
 
 
@@ -109,10 +102,6 @@ input[type='email']:hover:invalid{
     border-radius: 5px;
 }
 
-input[type='email']:hover:invalid + i{
-    opacity: 1;
-}
-
 
 input[type='email']:hover:valid{
     border: 2px solid rgb(9, 233, 9);
@@ -120,9 +109,22 @@ input[type='email']:hover:valid{
     border-radius: 5px;
 }
 
-input[type='email']:hover:valid + i{
-    display: none;
+
+
+/* //validation for password  */
+input[type='password']:hover:invalid{
+    border:2px solid red;
+    box-shadow: 0px 0px 5px red;
+    border-radius: 5px;
 }
+
+input[type='password']:hover:valid{
+    border: 2px solid rgb(9, 233, 9);
+    box-shadow: 0px 0px 5px rgb(9, 233, 9);
+    border-radius: 5px;
+}
+
+
 
 
 
