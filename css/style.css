@@ -30,6 +30,7 @@ form{
     animation: flip-in-hor-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
+
 @keyframes flip-in-hor-bottom {
     0% {
       -webkit-transform: rotateX(80deg);
@@ -72,12 +73,29 @@ input{
     outline: none;
     background-color: transparent;
     font-size: 3vh;
-    transition-duration: .7s;
+    transition-duration: .4s;
 }
 
 input:hover{
-    background-color: #000;
+    background-color: black;
 }
+
+
+/* //validation to emails field */
+input[type='email']:hover:invalid{
+    border-bottom:2px solid red;
+    box-shadow: 0px 0px 5px red;
+    border-radius: 5px;
+}
+
+
+input[type='email']:hover:valid{
+    border-bottom: 2px solid rgb(9, 233, 9);
+    box-shadow: 0px 0px 5px rgb(9, 233, 9);
+    border-radius: 5px;
+}
+
+
 
 ::-webkit-input-placeholder{
     color: #fff;
