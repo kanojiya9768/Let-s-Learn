@@ -84,11 +84,11 @@ input:hover{
 }
 
 
-
 input:focus{
     border: 2px solid #fff;
     border-radius: 5px;
 }
+
 
 
 
@@ -108,8 +108,6 @@ input[type='email']:hover:valid{
 
 
 
-
-
 /* //validation for password  */
 input[type='password']:hover:invalid{
     border:2px solid red;
@@ -122,8 +120,6 @@ input[type='password']:hover:valid{
     box-shadow: 0px 0px 5px rgb(9, 233, 9);
     border-radius: 5px;
 }
-
-
 
 
 
@@ -287,6 +283,3 @@ button:hover{
         font-size: 2vh;
     }
 }
-
-
-
