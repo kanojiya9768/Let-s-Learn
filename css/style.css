@@ -148,6 +148,10 @@ button:hover{
     text-align: center;
 }
 
+.captch > input:hover{
+    background-color: transparent;
+}
+
 
 @media (max-width:608px) {
     form{
