@@ -109,6 +109,25 @@ input[type='email']:hover:valid{
 
 
 
+
+/* //validation for password  */
+input[type='password']:hover:invalid{
+    border:2px solid red;
+    box-shadow: 0px 0px 5px red;
+    border-radius: 5px;
+}
+
+input[type='password']:hover:valid{
+    border: 2px solid rgb(9, 233, 9);
+    box-shadow: 0px 0px 5px rgb(9, 233, 9);
+    border-radius: 5px;
+}
+
+
+
+
+
+
 button{
     width: 40%;
     padding: 8px;
