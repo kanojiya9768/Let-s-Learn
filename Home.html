@@ -45,7 +45,7 @@
 <body oncontextmenu="return false">
 
 
-<!--     //preloader is here  -->
+
          <div id="preloader" class="container" style="width : 100%; height: 100vh;">
             <div class="main">
                   <div class="1box"></div>
@@ -84,7 +84,7 @@
             <li><a href="#contact_us"
                     class="element nav_link"><i class="fa-solid fa-message" style="margin-right:4px;"></i>contact</a>
             </li>
-            <li><a onclick="window.location.href = 'index.html';"
+            <li><a onclick="logout();"
                     class="element" id="logout" href="#"><i class="fa-solid fa-circle-left"></i>Logout</a>
             </li>
         </ul>
@@ -837,8 +837,8 @@
       <form class="contact_form" id="contact_form" autocomplete="off" data-aos="fade-in">
             <p class="contact_right_head">Contact Now <i class="fa-solid fa-comment-dots" style="margin-left:2px;"></i></p>
             <input type="text" placeholder="Enter Name" id="name" required pattern="[a-zA-Z].{12,}" title="Must Be At Least 12 Characters.!">
-            <input type="email" placeholder="Enter Email id" id="email" required pattern="[a-zA-Z0-9._+-]+@+[gG]+mail.com" title="Enter valid Email Id.! At Least 10 Number.!">
-            <input type="text" placeholder="Enter Number" id="number" required pattern="[0-9].{9,}" title="Enter Valid Number.!">
+            <input type="email" placeholder="Enter Email id" id="email" required pattern="[a-zA-Z0-9._+-]+@+[gG]+mail.com" title="Enter valid Email Id.!">
+            <input type="text" placeholder="Enter Number" id="number" required pattern="[0-9].{9,}" title="Enter Valid Number.! At Least 10 Number.!">
             <textarea name="message" id="message" placeholder="Enter Your Message.." required></textarea>
             <input type="submit" id="submit" class="contact_submit" value="Submit">
       </form>
@@ -910,8 +910,6 @@
             easing: 'ease'
       }
   );
-
-
 </script>
 
 <script src="js/vanilla-tilt.min.js"></script>
