@@ -135,6 +135,17 @@
         }
 
     </script>
+    
+    //check whether user still logged in or not if yes then redirect to home page 
+    <script>
+        let current_user = JSON.parse(localStorage.getItem('user'));
+
+        if(!current_user){
+            // window.location.assign('index.html');
+        }else{
+            window.location.assign('Home.html');
+        }
+    </script>
 </body>
 
 </html>
