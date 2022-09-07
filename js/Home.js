@@ -6,7 +6,7 @@ let current_user = JSON.parse(localStorage.getItem('user'));
 if(!current_user){
     window.location.assign('index.html');
 }else{
-    document.getElementById('lets_learn').innerText = current_user;
+    document.getElementById('current_user_of_the_site').innerText = current_user;
 }
 
 
