@@ -50,11 +50,9 @@ function signin(e) {
      document.getElementById('Okay_link_alert').href = 'Home.html';
      document.getElementById('Login').style.display = 'none';
 
-    //  setInterval(()=>{
-    //   window.location.assign('Home.html');
-    //  },2000);
-
-     // ...
+     //create a local storage to save the user
+    localStorage.setItem('user',JSON.stringify(email));
+    
    })
    .catch((error) => {
      var errorCode = error.code;
