@@ -23,3 +23,9 @@ let logout = () =>{
     window.onpageshow = function (evt) { if (evt.persisted) noBack() }
     window.onunload = function () { void (0) }
 }
+
+
+
+
+// set the email id default value of the email input of contact us page
+document.getElementById('email').value = current_user;
