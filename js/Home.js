@@ -29,3 +29,30 @@ let logout = () =>{
 
 // set the email id default value of the email input of contact us page
 document.getElementById('email').value = current_user;
+
+
+
+
+
+// checking the online offline event on site 
+window.addEventListener('online',()=>{
+    let text = document.getElementById('on_offline');
+    text.style.display = 'block';
+    text.style.color = 'lime';
+    text.innerText = 'You Are Back Online.'
+    
+    setTimeout(()=>{
+        text.style.display = 'none';
+    },4000)
+})
+
+window.addEventListener('offline',()=>{
+    let text = document.getElementById('on_offline');
+    text.style.display = 'block';
+    text.style.color = 'red';
+    text.innerText = 'You Are Offline.'
+    
+    setTimeout(()=>{
+        text.style.display = 'none';
+    },4000)
+})
