@@ -121,6 +121,7 @@
     font-size: 2.7vh;
     color: #fff;
     text-transform: capitalize;
+    resize: none;
 }
 
 .contact_us > .contact_form > #submit{
