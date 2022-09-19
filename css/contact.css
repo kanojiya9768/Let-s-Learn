@@ -69,37 +69,53 @@
     background-color: black;
 }
 
-.contact_us > .contact_form > input:focus{
+/* .contact_us > .contact_form > input:focus{
     border : 2px solid #fff;
     border-radius: 5px;
-}
+} */
 
 
 
 
 /* //validation to name field */
-.contact_us > .contact_form > input[type='text']:hover:invalid{
+.contact_us > .contact_form > input[type='text']:focus:invalid{
     border:2px solid red;
     box-shadow: 0px 0px 5px red;
     border-radius:5px;
 }
 
 
-.contact_us > .contact_form > input[type='text']:hover:valid{
+.contact_us > .contact_form > input[type='text']:focus:valid{
     border: 2px solid rgb(9, 233, 9);
     box-shadow: 0px 0px 5px rgb(9, 233, 9);
     border-radius: 5px;
 }
 
 /* //validation to emails field */
-.contact_us > .contact_form > input[type='email']:hover:invalid{
+.contact_us > .contact_form > input[type='email']:focus:invalid{
     border:2px solid red;
     box-shadow: 0px 0px 5px red;
     border-radius:5px;
 }
 
 
-.contact_us > .contact_form > input[type='email']:hover:valid{
+.contact_us > .contact_form > input[type='email']:focus:valid{
+    border: 2px solid rgb(9, 233, 9);
+    box-shadow: 0px 0px 5px rgb(9, 233, 9);
+    border-radius: 5px;
+}
+
+
+
+/* //validation to name field */
+.contact_us > .contact_form > input[type='tel']:focus:invalid{
+    border:2px solid red;
+    box-shadow: 0px 0px 5px red;
+    border-radius:5px;
+}
+
+
+.contact_us > .contact_form > input[type='tel']:focus:valid{
     border: 2px solid rgb(9, 233, 9);
     box-shadow: 0px 0px 5px rgb(9, 233, 9);
     border-radius: 5px;
@@ -121,7 +137,7 @@
     font-size: 2.7vh;
     color: #fff;
     text-transform: capitalize;
-    resize: none;
+    resize : none;
 }
 
 .contact_us > .contact_form > #submit{
@@ -283,3 +299,6 @@
         font-size: 2vh;
     }
 }
+
+
+
