@@ -78,14 +78,14 @@ input:hover{
 
 
 /* //validation to emails field */
-input[type='email']:hover:invalid{
+input[type='email']:focus:invalid{
     border:2px solid red;
     box-shadow: 0px 0px 5px red;
     border-radius: 5px;
 }
 
 
-input[type='email']:hover:valid{
+input[type='email']:focus:valid{
     border: 2px solid rgb(9, 233, 9);
     box-shadow: 0px 0px 5px rgb(9, 233, 9);
     border-radius: 5px;
