@@ -1,0 +1,141 @@
+*{
+    padding : 0px;
+    margin : 0px;
+    box-sizing : border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    width : 100%;
+    height : 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+::-webkit-scrollbar{
+    display : none;
+}
+
+
+.Logo{
+    color : #fff;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-block: 20px;
+    text-transform: uppercase;
+    width : max-content;
+    position: relative;
+}
+
+.Logo::before{
+    content : '';
+    width : 100%;
+    border : 2px solid orange;
+    position: absolute;
+    top : -5px;
+}
+
+
+
+
+.Logo::after{
+    content : '';
+    width : 100%;
+    border : 2px solid orange;
+    position: absolute;
+    bottom : -5px;
+    left : 0;
+}
+
+.user_name{
+    color : #fff;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-block: 10px;
+    text-transform: uppercase;
+}
+
+.container{
+    width : 100%;
+    height: auto;
+    display: grid;
+    place-items: center;
+    grid-template-columns:repeat(2,1fr);
+    gap : 20px;
+    padding : 10px;
+}
+
+.container > .video_box{
+    width : 100%;
+    height : 400px;
+    background-color: #111;
+    display: grid;
+    place-items: center;
+    gap : 10px;
+    padding: 10px;
+    transition: .3s;
+    transform: scale(1);
+}
+
+.container > .video_box:hover{
+    transform: scale(.96);
+}
+
+.container > .video_box > label{
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #fff;
+    position: relative;
+    width: max-content;
+}
+.container > .video_box > label::after{
+    content : '';
+    width : 100%;
+    border : 2px solid orange;
+    position: absolute;
+    bottom : -10px;
+    left : 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s ease;
+}
+
+
+.container > .video_box:hover > label::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.container > .video_box > iframe{
+    width : 100%;
+    height : 320px;
+    margin-top : 20px;
+    object-fit: cover;
+}
+
+
+
+
+@media (max-width : 1000px) {
+    .Logo{
+        font-size: 20px;
+    }
+
+    .user_name{
+        font-size: 20px;
+    }
+
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

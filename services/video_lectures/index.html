@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Video Lectures</title>
+</head>
+
+<body oncontextmenu="return false">
+    <p class="user_name" id="user_name"></p>
+    <p class="Logo">Learn In One Video</p>
+
+    <div class="container">
+
+        <div class="one video_box">
+            <label id="heading_lecture">HTML5 IN
+                HINDI</label>
+            <iframe
+                src="https://www.youtube.com/embed/BsDoLVMnmZs"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+
+        <div class="two video_box">
+            <label id="heading_lecture">HTML5 IN
+                ENGLISH</label>
+            <iframe
+                src="https://www.youtube.com/embed/kUMe1FH4CHE"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+
+        <div class="one video_box">
+            <label id="heading_lecture">CSS3 IN
+                HINDI</label>
+            <iframe
+                src="https://www.youtube.com/embed/WyxzAU3p8CE"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+
+        <div class="two video_box">
+            <label id="heading_lecture">CSS3 IN
+                ENGLISH</label>
+            <iframe
+                src="https://www.youtube.com/embed/n4R2E7O-Ngo"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+
+        <div class="one video_box">
+            <label id="heading_lecture">JAVASCRIPT
+                IN HINDI</label>
+            <iframe
+                src="https://www.youtube.com/embed/KGkiIBTq0y0"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+
+        <div class="two video_box">
+            <label id="heading_lecture">JAVASCRIPT
+                IN ENGLISH</label>
+            <iframe
+                src="https://www.youtube.com/embed/lI1ae4REbFM"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+
+        <div class="one video_box">
+            <label id="heading_lecture">BOOTSTRAP
+                IN HINDI</label>
+            <iframe
+                src="https://www.youtube.com/embed/vpAJ0s5S2t0"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+
+        <div class="two video_box">
+            <label id="heading_lecture">BOOTSTRAP
+                IN ENGLISH</label>
+            <iframe
+                src="https://www.youtube.com/embed/-qfEOE4vtxE"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+
+        <div class="one video_box">
+            <label id="heading_lecture">REACT
+                IN HINDI</label>
+            <iframe
+                src="https://www.youtube.com/embed/F18Rxw6ftcM"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+
+        <div class="two video_box">
+            <label id="heading_lecture">REACT
+                IN ENGLISH</label>
+            <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/bMknfKXIFA8"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+    </div>
+
+
+
+
+    <script>
+        //get user and make profile and if user is not logged in logout him automatically
+        let current_user = JSON.parse(localStorage.getItem('user'));
+
+        //set profile
+
+        if (!current_user) {
+            window.location.assign('https://kanojiya9768.github.io/Let-s-Learn/index.html');
+        } else {
+            document.getElementById('user_name').innerText = current_user;
+        }
+    </script>
+</body>
+
+</html>
