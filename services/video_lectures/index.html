@@ -8,6 +8,14 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+       <!-- //favicon link is here  -->
+       <link rel="shortcut icon"
+       href="/favicon/favicon.jpg"
+       type="image/x-icon">
+     
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+     
     <title>Video Lectures</title>
 </head>
 
@@ -17,7 +25,7 @@
 
     <div class="container">
 
-        <div class="one video_box">
+        <div class="one video_box" data-aos="fade-in">
             <label id="heading_lecture">HTML5 IN
                 HINDI</label>
             <iframe
@@ -29,7 +37,7 @@
         </div>
 
 
-        <div class="two video_box">
+        <div class="two video_box" data-aos="fade-in">
             <label id="heading_lecture">HTML5 IN
                 ENGLISH</label>
             <iframe
@@ -41,7 +49,7 @@
         </div>
 
 
-        <div class="one video_box">
+        <div class="three video_box" data-aos="fade-in">
             <label id="heading_lecture">CSS3 IN
                 HINDI</label>
             <iframe
@@ -53,7 +61,7 @@
         </div>
 
 
-        <div class="two video_box">
+        <div class="four video_box" data-aos="fade-in">
             <label id="heading_lecture">CSS3 IN
                 ENGLISH</label>
             <iframe
@@ -65,7 +73,7 @@
         </div>
 
 
-        <div class="one video_box">
+        <div class="five video_box" data-aos="fade-in">
             <label id="heading_lecture">JAVASCRIPT
                 IN HINDI</label>
             <iframe
@@ -77,7 +85,7 @@
         </div>
 
 
-        <div class="two video_box">
+        <div class="six video_box" data-aos="fade-in">
             <label id="heading_lecture">JAVASCRIPT
                 IN ENGLISH</label>
             <iframe
@@ -89,7 +97,7 @@
         </div>
 
 
-        <div class="one video_box">
+        <div class="seven video_box" data-aos="fade-in">
             <label id="heading_lecture">BOOTSTRAP
                 IN HINDI</label>
             <iframe
@@ -101,7 +109,7 @@
         </div>
 
 
-        <div class="two video_box">
+        <div class="eight video_box" data-aos="fade-in">
             <label id="heading_lecture">BOOTSTRAP
                 IN ENGLISH</label>
             <iframe
@@ -113,7 +121,7 @@
         </div>
 
 
-        <div class="one video_box">
+        <div class="nine video_box" data-aos="fade-in">
             <label id="heading_lecture">REACT
                 IN HINDI</label>
             <iframe
@@ -125,7 +133,7 @@
         </div>
 
 
-        <div class="two video_box">
+        <div class="ten video_box" data-aos="fade-in">
             <label id="heading_lecture">REACT
                 IN ENGLISH</label>
             <iframe width="560" height="315"
@@ -153,6 +161,17 @@
             document.getElementById('user_name').innerText = current_user;
         }
     </script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init(
+      {
+            offset: 105,
+            duration:1400,
+            easing: 'ease'
+      }
+  );
+</script>
 </body>
 
 </html>
